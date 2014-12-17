@@ -22,6 +22,38 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name="jp.ac.kcska.dokodemo.Blood.BloodMainActivity"
+            android:label="@string/title_activity_blood_main" >
+        </activity>
+        <activity
+            android:name="jp.ac.kcska.dokodemo.Food.FoodMainActivity"
+            android:label="@string/title_activity_food_main" >
+        </activity>
+        <activity
+            android:name="jp.ac.kcska.dokodemo.Graph.GraphMainActivity"
+            android:label="@string/title_activity_graph_main" >
+        </activity>
+        <activity
+            android:name="jp.ac.kcska.dokodemo.Home.HomeMainActivity"
+            android:label="@string/title_activity_home_main" >
+        </activity>
+        <activity
+            android:name="jp.ac.kcska.dokodemo.Login.LoginMainActivity"
+            android:label="@string/title_activity_login_main" >
+        </activity>
+        <activity
+            android:name="jp.ac.kcska.dokodemo.Medicine.MedicineMainActivity"
+            android:label="@string/title_activity_medicine_main" >
+        </activity>
+        <activity
+            android:name="jp.ac.kcska.dokodemo.Show.ShowMainActivity"
+            android:label="@string/title_activity_show_main" >
+        </activity>
+        <activity
+            android:name="jp.ac.kcska.dokodemo.Vial.VitalMainActivity"
+            android:label="@string/title_activity_vital_main" >
+        </activity>
     </application>
 
 </manifest>

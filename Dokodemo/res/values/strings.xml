@@ -4,5 +4,13 @@
     <string name="app_name">Dokodemo</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    <string name="title_activity_blood_main">BloodMainActivity</string>
+    <string name="title_activity_food_main">FoodMainActivity</string>
+    <string name="title_activity_graph_main">GraphMainActivity</string>
+    <string name="title_activity_home_main">HomeMainActivity</string>
+    <string name="title_activity_login_main">LoginMainActivity</string>
+    <string name="title_activity_medicine_main">MedicineMainActivity</string>
+    <string name="title_activity_show_main">ShowMainActivity</string>
+    <string name="title_activity_vital_main">VitalMainActivity</string>
 
 </resources>
