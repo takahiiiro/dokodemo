@@ -47,7 +47,6 @@ public class OneTimeActivity extends ActionBarActivity{
 			info_change();
 		}else if(id == R.id.logout){
 			log_out();
-			Toast.makeText(OneTimeActivity.this, "ログアウト出来ません！！", Toast.LENGTH_SHORT).show();
 		}
 		return super.onOptionsItemSelected(item);
 	}
