@@ -12,5 +12,8 @@
     <string name="title_activity_medicine_main">MedicineMainActivity</string>
     <string name="title_activity_show_main">ShowMainActivity</string>
     <string name="title_activity_vital_main">VitalMainActivity</string>
+    <string name="password">パスワード変更</string>
+    <string name="information">情報利用</string>
+    <string name="log_out">ログアウト</string>
 
 </resources>

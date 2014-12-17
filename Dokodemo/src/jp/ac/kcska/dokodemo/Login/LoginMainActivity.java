@@ -1,49 +1,74 @@
 package jp.ac.kcska.dokodemo.Login;
 
 import jp.ac.kcska.dokodemo.R;
-import jp.ac.kcska.dokodemo.R.id;
-import jp.ac.kcska.dokodemo.R.layout;
-import jp.ac.kcska.dokodemo.R.menu;
-import android.support.v7.app.ActionBarActivity;
-import android.support.v7.app.ActionBar;
 import android.support.v4.app.Fragment;
+import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.ViewGroup;
-import android.os.Build;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Toast;
 
-public class LoginMainActivity extends ActionBarActivity {
+public class LoginMainActivity extends Activity {
+	
+	String id = "nakazono";
+	String pass = "pass";
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_login_main);
-
-		if (savedInstanceState == null) {
-			getSupportFragmentManager().beginTransaction()
-					.add(R.id.container, new PlaceholderFragment()).commit();
-		}
+		setContentView(R.layout.fragment_login_main);
+		
+		Button bt = (Button)findViewById(R.id.button1);
+		final EditText ed1 = (EditText)findViewById(R.id.editText1);
+		final EditText ed2 = (EditText)findViewById(R.id.editText2);
+		
+		bt.setOnClickListener(new OnClickListener() {
+			
+			public void onClick(View v) {
+				// TODO 自動生成されたメソッド・スタブ
+				String inputId = ed1.getText().toString();
+				if(inputId.equals("")){
+					Toast.makeText(LoginMainActivity.this, "ユーザIDを入力してください", Toast.LENGTH_SHORT).show();
+				}else{
+					if(id.equals(inputId)){
+						String inputPass = ed2.getText().toString();
+						if(pass.equals(inputPass)){
+							Intent intent = new Intent(LoginMainActivity.this, 
+								OneTimeActivity.class);
+							startActivity(intent);
+						}else{
+							Toast.makeText(LoginMainActivity.this, "パスワードが違います", Toast.LENGTH_SHORT).show();
+						}
+					}else{
+						Toast.makeText(LoginMainActivity.this, "ユーザＩＤが違います", Toast.LENGTH_SHORT).show();
+					}
+				}
+			}
+		});
 	}
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
-
-		// Inflate the menu; this adds items to the action bar if it is present.
 		getMenuInflater().inflate(R.menu.login_main, menu);
 		return true;
 	}
 
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
-		// Handle action bar item clicks here. The action bar will
-		// automatically handle clicks on the Home/Up button, so long
-		// as you specify a parent activity in AndroidManifest.xml.
 		int id = item.getItemId();
-		if (id == R.id.action_settings) {
-			return true;
+		if (id == R.id.pass) {
+			dialog_pass_change();
+		}else if(id == R.id.info){
+			info_change();
 		}
 		return super.onOptionsItemSelected(item);
 	}
@@ -59,10 +84,75 @@ public class LoginMainActivity extends ActionBarActivity {
 		@Override
 		public View onCreateView(LayoutInflater inflater, ViewGroup container,
 				Bundle savedInstanceState) {
-			View rootView = inflater.inflate(R.layout.fragment_login_main,
-					container, false);
+			View rootView = inflater.inflate(R.layout.fragment_login_main, container,
+					false);
 			return rootView;
 		}
 	}
-
+	
+	public void dialog_pass_change() {
+		// TODO 自動生成されたメソッド・スタブ
+		LayoutInflater factory = LayoutInflater.from(LoginMainActivity.this);
+		View inputView = factory.inflate(R.layout.dialog, null);
+		final EditText ed1 =(EditText)inputView.findViewById(R.id.editText1);
+		final EditText ed2 =(EditText)inputView.findViewById(R.id.editText2);
+		final EditText ed3 =(EditText)inputView.findViewById(R.id.editText3);
+		new AlertDialog.Builder(LoginMainActivity.this)
+		.setTitle("パスワード変更")
+		.setView(inputView)
+		.setCancelable(false)
+		.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+			@Override
+			public void onClick(DialogInterface dialog, int which) {
+				// TODO 自動生成されたメソッド・スタブ
+				
+				String nowPass = ed1.getText().toString();
+				String newPass = ed2.getText().toString();
+				String newPass2 = ed3.getText().toString();
+				if(nowPass.equals(pass)){
+					if(newPass.equals(newPass2)){
+						pass = newPass;
+						Toast.makeText(LoginMainActivity.this, pass, Toast.LENGTH_SHORT).show();
+					}else{
+						Toast.makeText(LoginMainActivity.this, "確認用のパスワードが違います", Toast.LENGTH_SHORT).show();
+					}
+					//Toast.makeText(LoginMainActivity.this, "パスワードを変更しました", Toast.LENGTH_SHORT).show();
+				}else{
+					Toast.makeText(LoginMainActivity.this, "パスワードが違います", Toast.LENGTH_SHORT).show();
+					dialog.cancel();
+				}
+			}
+		})
+		.setNegativeButton("cancel", new DialogInterface.OnClickListener(){
+			@Override
+			public void onClick(DialogInterface dialog, int which) {
+				dialog.cancel();
+			}
+		})
+		.show();	
+	}
+	
+	public void info_change(){
+		LayoutInflater factory = LayoutInflater.from(LoginMainActivity.this);
+		View inputView = factory.inflate(R.layout.information, null);
+		new AlertDialog.Builder(LoginMainActivity.this)
+		.setTitle("情報利用変更")
+		.setView(inputView)
+		.setCancelable(false)
+		.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+			@Override
+			public void onClick(DialogInterface dialog, int which) {
+				dialog.cancel();
+			}
+		})
+		.setNegativeButton("cancel", new DialogInterface.OnClickListener() {
+			
+			@Override
+			public void onClick(DialogInterface dialog, int which) {
+				// TODO 自動生成されたメソッド・スタブ
+				dialog.cancel();
+			}
+		})
+		.show();
+	}
 }

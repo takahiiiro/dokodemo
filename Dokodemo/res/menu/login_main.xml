@@ -1,12 +1,22 @@
-<menu xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    tools:context="jp.ac.kcska.dokodemo.LoginMainActivity" >
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/action_settings"
+        android:id="@+id/pass"
         android:orderInCategory="100"
-        android:title="@string/action_settings"
-        app:showAsAction="never"/>
+        android:title="@string/password"
+        android:showAsAction="never"/>
+    
+    <item
+        android:id="@+id/info"
+        android:orderInCategory="100"
+        android:title="@string/information"
+        android:showAsAction="never"/>
+    
+    <item
+        android:id="@+id/logout"
+        android:orderInCategory="100"
+        android:title="@string/log_out"
+        android:showAsAction="never"/>
 
 </menu>
