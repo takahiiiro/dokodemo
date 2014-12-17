@@ -13,9 +13,12 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 import android.os.Build;
 
 public class BloodMainActivity extends ActionBarActivity {
+	
+	private TextView tv;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
