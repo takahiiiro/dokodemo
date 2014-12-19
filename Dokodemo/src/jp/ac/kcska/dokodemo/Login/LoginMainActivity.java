@@ -19,7 +19,7 @@ import android.widget.Toast;
 
 public class LoginMainActivity extends Activity {
 	
-	String id = "nakazono";
+	String id = "Nakazono";
 	String pass = "pass";
 
 	@Override
