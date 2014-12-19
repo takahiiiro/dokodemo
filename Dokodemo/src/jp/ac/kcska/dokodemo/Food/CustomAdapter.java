@@ -39,9 +39,7 @@ public class CustomAdapter extends ArrayAdapter<String> {
             TextView label = (TextView)view.findViewById(R.id.tv);
             holder = new ViewHolder();
             holder.labelText = label;
-            //TextView tv1 = (TextView)view.findViewById(R.id.textView1);
-            //tv1.setVisibility(View.VISIBLE);
-            view.setTag(holder);  
+            view.setTag(holder);            
         } else {
             holder = (ViewHolder) view.getTag();
         }
