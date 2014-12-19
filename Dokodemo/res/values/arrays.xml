@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+   <string-array name="list">
+    <item ></item>
+    <item>超速攻型インスリン製剤</item>
+    <item>速攻型インスリン製剤</item>
+    <item>中間型インスリン製剤</item>
+    <item>混合型インスリン製剤</item>
+    <item>特効型溶解インスリン製剤</item>
+    </string-array>
+</resources>

@@ -1,8 +1,79 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/container"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="jp.ac.kcska.dokodemo.Blood.BloodMainActivity"
-    tools:ignore="MergeRootFrame" />
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#E6E6FA"
+    android:orientation="vertical"
+    android:padding="15dp"
+    android:paddingTop="15dp" >
 
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.72" >
+
+        <LinearLayout
+            android:layout_width="150dp"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center_horizontal"
+            android:orientation="vertical" >
+
+            <Button
+                android:id="@+id/morning_btn1"
+                android:layout_width="fill_parent"
+                android:layout_height="73dp"
+                android:background="#FFA07A"
+                android:padding="15dp"
+                android:text="朝食まえ" />
+
+            <Button
+                android:id="@+id/morning_btn2"
+                android:layout_width="fill_parent"
+                android:layout_height="70dp"
+                android:layout_gravity="center_horizontal"
+                android:background="#FFA07A"
+                android:text="朝食あと" />
+
+            <Button
+                android:id="@+id/lunch_btn1"
+                android:layout_width="fill_parent"
+                android:layout_height="67dp"
+                android:layout_gravity="center_horizontal"
+                android:background="#98FB98"
+                android:text="昼食まえ" />
+
+            <Button
+                android:id="@+id/lunch_btn2"
+                android:layout_width="fill_parent"
+                android:layout_height="69dp"
+                android:layout_gravity="center_horizontal"
+                android:background="#98FB98"
+                android:text="昼食あと" />
+
+            <Button
+                android:id="@+id/dinner_btn1"
+                android:layout_width="fill_parent"
+                android:layout_height="66dp"
+                android:layout_gravity="center_horizontal"
+                android:background="#48D1CC"
+                android:text="夕食まえ" />
+
+            <Button
+                android:id="@+id/dinner_btn2"
+                android:layout_width="fill_parent"
+                android:layout_height="68dp"
+                android:layout_gravity="center_horizontal"
+                android:background="#48D1CC"
+                android:text="夕食あと" />
+
+            <Button
+                android:id="@+id/night_btn1"
+                android:layout_width="fill_parent"
+                android:layout_height="64dp"
+                android:layout_gravity="center_horizontal"
+                android:background="#D8BFD8"
+                android:text="睡眠まえ" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
