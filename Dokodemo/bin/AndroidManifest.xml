@@ -5,8 +5,9 @@
     android:versionName="1.0" >
 
     <uses-sdk
-        android:minSdkVersion="8"
+        android:minSdkVersion="14"
         android:targetSdkVersion="19" />
+    <uses-permission android:name="android.permission.INTERNET"/>
 
     <application
         android:allowBackup="true"
@@ -14,7 +15,7 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name="jp.ac.kcska.dokodemo.DokodemoMainActivity"
+            android:name="jp.ac.kcska.dokodemo.Login.LoginMainActivity"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -39,10 +40,6 @@
             android:label="@string/title_activity_home_main" >
         </activity>
         <activity
-            android:name="jp.ac.kcska.dokodemo.Login.LoginMainActivity"
-            android:label="@string/title_activity_login_main" >
-        </activity>
-        <activity
             android:name="jp.ac.kcska.dokodemo.Medicine.MedicineMainActivity"
             android:label="@string/title_activity_medicine_main" >
         </activity>
@@ -51,9 +48,12 @@
             android:label="@string/title_activity_show_main" >
         </activity>
         <activity
+            android:name="jp.ac.kcska.dokodemo.Show.CalMainActivity"
+            android:label="@string/title_activity_cal_main">        
+        </activity>
+        <activity
             android:name="jp.ac.kcska.dokodemo.Vial.VitalMainActivity"
             android:label="@string/title_activity_vital_main" >
         </activity>
     </application>
-
 </manifest>
