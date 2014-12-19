@@ -54,6 +54,22 @@
             android:name="jp.ac.kcska.dokodemo.Vial.VitalMainActivity"
             android:label="@string/title_activity_vital_main" >
         </activity>
+        <activity
+            android:name="jp.co.dokodemo.Food.foodmane.FoodManageSelectActivity"
+            android:configChanges="orientation|screenSize"
+            android:label="@string/app_name_food" >
+        </activity>
+        <activity
+            android:name="jp.co.dokodemo.Food.foodmane.FoodChangeSelectActivity"
+            android:configChanges="orientation|screenSize"
+            android:label="@string/title_activity_food_change_select" >
+        </activity>
+        <activity
+            android:name="jp.co.dokodemo.Food.foodmane.FoodSign_upActivity"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:label="@string/title_activity_food_sign_up" >
+        </activity>
     </application>
 
 </manifest>

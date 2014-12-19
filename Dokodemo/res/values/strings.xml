@@ -15,5 +15,8 @@
     <string name="password">パスワード変更</string>
     <string name="information">情報利用</string>
     <string name="log_out">ログアウト</string>
+    <string name="app_name_food">食事管理</string>
+    <string name="title_activity_food_change_select">食事変更選択画面</string>
+    <string name="title_activity_food_sign_up">食事登録画面</string>
 
 </resources>
