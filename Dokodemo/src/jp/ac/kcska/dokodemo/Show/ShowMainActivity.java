@@ -360,7 +360,7 @@ public class ShowMainActivity extends Activity implements OnClickListener{
 				asyncGet.execute("http://192.168.33.10:3000/formuras.json");
 			    break;
 			case R.id.textView1:
-				Intent intent = new Intent(ShowMainActivity.this,MainActivity.class);
+				Intent intent = new Intent(ShowMainActivity.this,CalMainActivity.class);
 				int requestCode =1001;
 				String calll = cal.get(Calendar.YEAR)+""+String.format("%02d", cal.get(Calendar.MONTH));
 				intent.putExtra("calcal", calll);
