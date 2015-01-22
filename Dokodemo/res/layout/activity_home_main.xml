@@ -3,6 +3,135 @@
     android:id="@+id/container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="jp.ac.kcska.dokodemo.Home.HomeMainActivity"
-    tools:ignore="MergeRootFrame" />
+    tools:context="com.example.myhospital.MainActivity"
+    tools:ignore="MergeRootFrame" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/layout1"
+            android:layout_width="match_parent"
+            android:layout_height="350dp"
+            android:orientation="vertical" >
+
+        </LinearLayout>
+        
+        <Space
+                android:layout_width="match_parent"
+                android:layout_height="40dp" />
+    
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+
+            <ImageButton
+                android:id="@+id/imageButton1"
+                android:layout_width="300dp"
+                android:layout_height="180dp"
+                android:background="#ff8c00"
+                android:src="@drawable/ic_action_accessibility" />
+
+
+            <ImageButton
+                android:id="@+id/imageButton2"
+                android:layout_width="300dp"
+                android:layout_height="180dp"
+                android:background="#ff69b4"
+                android:src="@drawable/ic_helth" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+            
+            <Space
+                android:layout_width="70dp"
+                android:layout_height="match_parent" />
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="アバター管理"
+                android:textSize="20sp" />
+            
+            
+            
+            <Space
+                android:layout_width="150dp"
+                android:layout_height="match_parent" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="ヘルス管理"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+        
+        <Space
+                android:layout_width="match_parent"
+                android:layout_height="15dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <ImageButton
+                android:id="@+id/imageButton3"
+                android:layout_width="300dp"
+                android:layout_height="180dp"
+                android:background="#1e90ff"
+                android:src="@drawable/ic_blood" />
+
+            <ImageButton
+                android:id="@+id/imageButton4"
+                android:layout_width="300dp"
+                android:layout_height="180dp"
+                android:background="#00ff7f"
+                android:src="@drawable/ic_library" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+            
+            <Space
+                android:layout_width="80dp"
+                android:layout_height="match_parent" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="血糖値・インスリン"
+                android:textSize="16sp" />
+            
+            <Space
+                android:layout_width="150dp"
+                android:layout_height="match_parent" />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="閲覧"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>
 

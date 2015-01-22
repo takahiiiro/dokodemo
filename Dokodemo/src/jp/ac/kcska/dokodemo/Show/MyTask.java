@@ -30,7 +30,7 @@ public class MyTask extends AsyncTask<String, Integer, ArrayList<String>>{
     private AsyncCallback _asyncCallback = null;
  
     /*
-     * ƒRƒ“ƒXƒgƒ‰ƒNƒ^
+     * ï¿½Rï¿½ï¿½ï¿½Xï¿½gï¿½ï¿½ï¿½Nï¿½^
      */
     public MyTask(AsyncCallback asyncCallback) {
         this._asyncCallback = asyncCallback;
@@ -42,7 +42,7 @@ public class MyTask extends AsyncTask<String, Integer, ArrayList<String>>{
     }
  
     /**
-     * ƒoƒbƒNƒOƒ‰ƒ“ƒh‚Ås‚¤ˆ—
+     * ï¿½oï¿½bï¿½Nï¿½Oï¿½ï¿½ï¿½ï¿½ï¿½hï¿½Åsï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
      */
     @Override
     protected ArrayList<String> doInBackground(String... value) {
@@ -62,14 +62,14 @@ public class MyTask extends AsyncTask<String, Integer, ArrayList<String>>{
                 HttpGet request = new HttpGet(uri.toString());
                 HttpResponse httpResponse = null;
                 httpResponse = httpClient.execute(request);
-                Log.d("ƒEƒ‹ƒgƒ‰ƒ\ƒEƒ‹", httpResponse.getEntity().toString());
+                Log.d("a", httpResponse.getEntity().toString());
                 
                 int status = httpResponse.getStatusLine().getStatusCode();
                 
                 if (HttpStatus.SC_OK == status) {
                         ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
                         httpResponse.getEntity().writeTo(outputStream);
-                        data = outputStream.toString(); // JSONƒf[ƒ^
+                        data = outputStream.toString(); // JSONï¿½fï¿½[ï¿½^
                 } else {
                     Log.d("JSONSampleActivity", "Status" + status);
                     return list;
@@ -79,7 +79,7 @@ public class MyTask extends AsyncTask<String, Integer, ArrayList<String>>{
             	JSONArray rootArray = new JSONArray(data);
             	for(int i = 0; i < rootArray.length();i++){
             		JSONObject jsonObject = rootArray.getJSONObject(i);
-            		list.add(jsonObject.getString("formura_delivery_date"));
+            		list.add(jsonObject.getString("medicine_name"));
             	}
 				
               } catch (InterruptedException e) {

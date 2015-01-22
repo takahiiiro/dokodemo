@@ -15,9 +15,12 @@ public final class R {
         public static final int abc_slide_in_top=0x7f040003;
         public static final int abc_slide_out_bottom=0x7f040004;
         public static final int abc_slide_out_top=0x7f040005;
+        public static final int item_motion=0x7f040006;
+        public static final int item_motion_1=0x7f040007;
     }
     public static final class array {
-        public static final int week_names=0x7f0c0000;
+        public static final int list=0x7f0c0000;
+        public static final int week_names=0x7f0c0001;
     }
     public static final class attr {
         /**  Custom divider drawable to use for elements in the action bar. 
@@ -226,6 +229,148 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
          */
         public static final int backgroundStacked=0x7f01002c;
+        /** <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int bb_icon_left=0x7f01006b;
+        /** <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int bb_icon_right=0x7f01006c;
+        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int bb_roundedCorners=0x7f01006d;
+        /** <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int bb_size=0x7f01006f;
+        /** <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int bb_text_alignment=0x7f01006e;
+        /** <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int bb_text_gravity=0x7f010070;
+        /** <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int bb_type=0x7f01006a;
+        /** <p>Must be an integer value, such as "<code>100</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int bct_image=0x7f010079;
+        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int bct_minimal=0x7f01007b;
+        /** <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int bct_size=0x7f01007a;
+        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int be_roundedCorners=0x7f010072;
+        /** <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int be_state=0x7f010073;
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int bt_height=0x7f010077;
+        /** <p>Must be an integer value, such as "<code>100</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int bt_image=0x7f010075;
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int bt_inside_padding=0x7f010078;
+        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int bt_roundedCorners=0x7f010074;
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int bt_width=0x7f010076;
         /**  A style that may be applied to Buttons placed within a
          LinearLayout with the style buttonBarStyle to form a button bar. 
          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
@@ -321,6 +466,14 @@ containing a value of this type.
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static final int expandActivityOverflowButtonDrawable=0x7f010067;
+        /** <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int fa_icon=0x7f010071;
         /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
@@ -797,10 +950,61 @@ containing a value of this type.
         public static final int abc_split_action_bar_is_narrow=0x7f060002;
     }
     public static final class color {
-        public static final int abc_search_url_text_holo=0x7f070003;
+        public static final int abc_search_url_text_holo=0x7f070035;
         public static final int abc_search_url_text_normal=0x7f070000;
         public static final int abc_search_url_text_pressed=0x7f070002;
         public static final int abc_search_url_text_selected=0x7f070001;
+        public static final int bbutton_danger=0x7f07000d;
+        public static final int bbutton_danger_disabled=0x7f070011;
+        public static final int bbutton_danger_disabled_edge=0x7f070012;
+        public static final int bbutton_danger_edge=0x7f07000e;
+        public static final int bbutton_danger_pressed=0x7f07000f;
+        public static final int bbutton_danger_pressed_edge=0x7f070010;
+        public static final int bbutton_default=0x7f070025;
+        public static final int bbutton_default_disabled=0x7f070029;
+        public static final int bbutton_default_disabled_edge=0x7f07002a;
+        public static final int bbutton_default_edge=0x7f070026;
+        public static final int bbutton_default_pressed=0x7f070027;
+        public static final int bbutton_default_pressed_edge=0x7f070028;
+        public static final int bbutton_edittext_border=0x7f070005;
+        public static final int bbutton_edittext_disabled=0x7f070006;
+        public static final int bbutton_info=0x7f07001f;
+        public static final int bbutton_info_disabled=0x7f070023;
+        public static final int bbutton_info_disabled_edge=0x7f070024;
+        public static final int bbutton_info_edge=0x7f070020;
+        public static final int bbutton_info_pressed=0x7f070021;
+        public static final int bbutton_info_pressed_edge=0x7f070022;
+        public static final int bbutton_inverse=0x7f07002b;
+        public static final int bbutton_inverse_disabled=0x7f07002f;
+        public static final int bbutton_inverse_disabled_edge=0x7f070030;
+        public static final int bbutton_inverse_edge=0x7f07002c;
+        public static final int bbutton_inverse_pressed=0x7f07002d;
+        public static final int bbutton_inverse_pressed_edge=0x7f07002e;
+        public static final int bbutton_primary=0x7f070007;
+        public static final int bbutton_primary_disabled=0x7f07000b;
+        public static final int bbutton_primary_disabled_edge=0x7f07000c;
+        public static final int bbutton_primary_edge=0x7f070008;
+        public static final int bbutton_primary_pressed=0x7f070009;
+        public static final int bbutton_primary_pressed_edge=0x7f07000a;
+        public static final int bbutton_success=0x7f070013;
+        public static final int bbutton_success_disabled=0x7f070017;
+        public static final int bbutton_success_disabled_edge=0x7f070018;
+        public static final int bbutton_success_edge=0x7f070014;
+        public static final int bbutton_success_pressed=0x7f070015;
+        public static final int bbutton_success_pressed_edge=0x7f070016;
+        public static final int bbutton_warning=0x7f070019;
+        public static final int bbutton_warning_disabled=0x7f07001d;
+        public static final int bbutton_warning_disabled_edge=0x7f07001e;
+        public static final int bbutton_warning_edge=0x7f07001a;
+        public static final int bbutton_warning_pressed=0x7f07001b;
+        public static final int bbutton_warning_pressed_edge=0x7f07001c;
+        public static final int black=0x7f070004;
+        public static final int bthumbnail_background=0x7f070031;
+        public static final int bthumbnail_border=0x7f070033;
+        public static final int bthumbnail_font=0x7f070034;
+        public static final int bthumbnail_placeholder=0x7f070032;
+        public static final int date_number_text_color=0x7f070036;
+        public static final int white=0x7f070003;
     }
     public static final class dimen {
         /**  Default height of an action bar. 
@@ -888,6 +1092,11 @@ containing a value of this type.
         public static final int abc_search_view_text_min_width=0x7f08000c;
         /**  Default screen margins, per the Android Design guidelines. 
 
+         Customize dimensions originally defined in res/values/dimens.xml (such as
+         screen margins) for sw720dp devices (e.g. 10" tablets) in landscape here.
+    
+ Default screen margins, per the Android Design guidelines. 
+
          Example customization of dimensions originally defined in res/values/dimens.xml
          (such as screen margins) for screens with more than 820dp of available width. This
          would include 7" and 10" devices in landscape (~960dp and ~1280dp respectively).
@@ -895,106 +1104,186 @@ containing a value of this type.
          */
         public static final int activity_horizontal_margin=0x7f080011;
         public static final int activity_vertical_margin=0x7f080012;
+        public static final int bbuton_rounded_corner_radius=0x7f080013;
+        public static final int bthumbnail_rounded_corner_radius=0x7f080014;
+        public static final int day_margin=0x7f08001a;
+        public static final int first_day_margin=0x7f080019;
+        public static final int min_cell_height=0x7f08001c;
+        public static final int min_cell_width=0x7f08001d;
+        public static final int padding_large=0x7f080018;
+        public static final int padding_medium=0x7f080017;
+        public static final int padding_micro=0x7f080015;
+        public static final int padding_small=0x7f080016;
+        public static final int text_height_width=0x7f08001b;
     }
     public static final class drawable {
-        public static final int abc_ab_bottom_solid_dark_holo=0x7f020000;
-        public static final int abc_ab_bottom_solid_light_holo=0x7f020001;
-        public static final int abc_ab_bottom_transparent_dark_holo=0x7f020002;
-        public static final int abc_ab_bottom_transparent_light_holo=0x7f020003;
-        public static final int abc_ab_share_pack_holo_dark=0x7f020004;
-        public static final int abc_ab_share_pack_holo_light=0x7f020005;
-        public static final int abc_ab_solid_dark_holo=0x7f020006;
-        public static final int abc_ab_solid_light_holo=0x7f020007;
-        public static final int abc_ab_stacked_solid_dark_holo=0x7f020008;
-        public static final int abc_ab_stacked_solid_light_holo=0x7f020009;
-        public static final int abc_ab_stacked_transparent_dark_holo=0x7f02000a;
-        public static final int abc_ab_stacked_transparent_light_holo=0x7f02000b;
-        public static final int abc_ab_transparent_dark_holo=0x7f02000c;
-        public static final int abc_ab_transparent_light_holo=0x7f02000d;
-        public static final int abc_cab_background_bottom_holo_dark=0x7f02000e;
-        public static final int abc_cab_background_bottom_holo_light=0x7f02000f;
-        public static final int abc_cab_background_top_holo_dark=0x7f020010;
-        public static final int abc_cab_background_top_holo_light=0x7f020011;
-        public static final int abc_ic_ab_back_holo_dark=0x7f020012;
-        public static final int abc_ic_ab_back_holo_light=0x7f020013;
-        public static final int abc_ic_cab_done_holo_dark=0x7f020014;
-        public static final int abc_ic_cab_done_holo_light=0x7f020015;
-        public static final int abc_ic_clear=0x7f020016;
-        public static final int abc_ic_clear_disabled=0x7f020017;
-        public static final int abc_ic_clear_holo_light=0x7f020018;
-        public static final int abc_ic_clear_normal=0x7f020019;
-        public static final int abc_ic_clear_search_api_disabled_holo_light=0x7f02001a;
-        public static final int abc_ic_clear_search_api_holo_light=0x7f02001b;
-        public static final int abc_ic_commit_search_api_holo_dark=0x7f02001c;
-        public static final int abc_ic_commit_search_api_holo_light=0x7f02001d;
-        public static final int abc_ic_go=0x7f02001e;
-        public static final int abc_ic_go_search_api_holo_light=0x7f02001f;
-        public static final int abc_ic_menu_moreoverflow_normal_holo_dark=0x7f020020;
-        public static final int abc_ic_menu_moreoverflow_normal_holo_light=0x7f020021;
-        public static final int abc_ic_menu_share_holo_dark=0x7f020022;
-        public static final int abc_ic_menu_share_holo_light=0x7f020023;
-        public static final int abc_ic_search=0x7f020024;
-        public static final int abc_ic_search_api_holo_light=0x7f020025;
-        public static final int abc_ic_voice_search=0x7f020026;
-        public static final int abc_ic_voice_search_api_holo_light=0x7f020027;
-        public static final int abc_item_background_holo_dark=0x7f020028;
-        public static final int abc_item_background_holo_light=0x7f020029;
-        public static final int abc_list_divider_holo_dark=0x7f02002a;
-        public static final int abc_list_divider_holo_light=0x7f02002b;
-        public static final int abc_list_focused_holo=0x7f02002c;
-        public static final int abc_list_longpressed_holo=0x7f02002d;
-        public static final int abc_list_pressed_holo_dark=0x7f02002e;
-        public static final int abc_list_pressed_holo_light=0x7f02002f;
-        public static final int abc_list_selector_background_transition_holo_dark=0x7f020030;
-        public static final int abc_list_selector_background_transition_holo_light=0x7f020031;
-        public static final int abc_list_selector_disabled_holo_dark=0x7f020032;
-        public static final int abc_list_selector_disabled_holo_light=0x7f020033;
-        public static final int abc_list_selector_holo_dark=0x7f020034;
-        public static final int abc_list_selector_holo_light=0x7f020035;
-        public static final int abc_menu_dropdown_panel_holo_dark=0x7f020036;
-        public static final int abc_menu_dropdown_panel_holo_light=0x7f020037;
-        public static final int abc_menu_hardkey_panel_holo_dark=0x7f020038;
-        public static final int abc_menu_hardkey_panel_holo_light=0x7f020039;
-        public static final int abc_search_dropdown_dark=0x7f02003a;
-        public static final int abc_search_dropdown_light=0x7f02003b;
-        public static final int abc_spinner_ab_default_holo_dark=0x7f02003c;
-        public static final int abc_spinner_ab_default_holo_light=0x7f02003d;
-        public static final int abc_spinner_ab_disabled_holo_dark=0x7f02003e;
-        public static final int abc_spinner_ab_disabled_holo_light=0x7f02003f;
-        public static final int abc_spinner_ab_focused_holo_dark=0x7f020040;
-        public static final int abc_spinner_ab_focused_holo_light=0x7f020041;
-        public static final int abc_spinner_ab_holo_dark=0x7f020042;
-        public static final int abc_spinner_ab_holo_light=0x7f020043;
-        public static final int abc_spinner_ab_pressed_holo_dark=0x7f020044;
-        public static final int abc_spinner_ab_pressed_holo_light=0x7f020045;
-        public static final int abc_tab_indicator_ab_holo=0x7f020046;
-        public static final int abc_tab_selected_focused_holo=0x7f020047;
-        public static final int abc_tab_selected_holo=0x7f020048;
-        public static final int abc_tab_selected_pressed_holo=0x7f020049;
-        public static final int abc_tab_unselected_pressed_holo=0x7f02004a;
-        public static final int abc_textfield_search_default_holo_dark=0x7f02004b;
-        public static final int abc_textfield_search_default_holo_light=0x7f02004c;
-        public static final int abc_textfield_search_right_default_holo_dark=0x7f02004d;
-        public static final int abc_textfield_search_right_default_holo_light=0x7f02004e;
-        public static final int abc_textfield_search_right_selected_holo_dark=0x7f02004f;
-        public static final int abc_textfield_search_right_selected_holo_light=0x7f020050;
-        public static final int abc_textfield_search_selected_holo_dark=0x7f020051;
-        public static final int abc_textfield_search_selected_holo_light=0x7f020052;
-        public static final int abc_textfield_searchview_holo_dark=0x7f020053;
-        public static final int abc_textfield_searchview_holo_light=0x7f020054;
-        public static final int abc_textfield_searchview_right_holo_dark=0x7f020055;
-        public static final int abc_textfield_searchview_right_holo_light=0x7f020056;
-        public static final int button=0x7f020057;
-        public static final int button_normal=0x7f020058;
-        public static final int button_pressed=0x7f020059;
-        public static final int ic_launcher=0x7f02005a;
-        public static final int item_background=0x7f02005b;
-        public static final int note=0x7f02005c;
-        public static final int orange=0x7f02005d;
-        public static final int tabb=0x7f02005e;
+        public static final int a=0x7f020000;
+        public static final int abc_ab_bottom_solid_dark_holo=0x7f020001;
+        public static final int abc_ab_bottom_solid_light_holo=0x7f020002;
+        public static final int abc_ab_bottom_transparent_dark_holo=0x7f020003;
+        public static final int abc_ab_bottom_transparent_light_holo=0x7f020004;
+        public static final int abc_ab_share_pack_holo_dark=0x7f020005;
+        public static final int abc_ab_share_pack_holo_light=0x7f020006;
+        public static final int abc_ab_solid_dark_holo=0x7f020007;
+        public static final int abc_ab_solid_light_holo=0x7f020008;
+        public static final int abc_ab_stacked_solid_dark_holo=0x7f020009;
+        public static final int abc_ab_stacked_solid_light_holo=0x7f02000a;
+        public static final int abc_ab_stacked_transparent_dark_holo=0x7f02000b;
+        public static final int abc_ab_stacked_transparent_light_holo=0x7f02000c;
+        public static final int abc_ab_transparent_dark_holo=0x7f02000d;
+        public static final int abc_ab_transparent_light_holo=0x7f02000e;
+        public static final int abc_cab_background_bottom_holo_dark=0x7f02000f;
+        public static final int abc_cab_background_bottom_holo_light=0x7f020010;
+        public static final int abc_cab_background_top_holo_dark=0x7f020011;
+        public static final int abc_cab_background_top_holo_light=0x7f020012;
+        public static final int abc_ic_ab_back_holo_dark=0x7f020013;
+        public static final int abc_ic_ab_back_holo_light=0x7f020014;
+        public static final int abc_ic_cab_done_holo_dark=0x7f020015;
+        public static final int abc_ic_cab_done_holo_light=0x7f020016;
+        public static final int abc_ic_clear=0x7f020017;
+        public static final int abc_ic_clear_disabled=0x7f020018;
+        public static final int abc_ic_clear_holo_light=0x7f020019;
+        public static final int abc_ic_clear_normal=0x7f02001a;
+        public static final int abc_ic_clear_search_api_disabled_holo_light=0x7f02001b;
+        public static final int abc_ic_clear_search_api_holo_light=0x7f02001c;
+        public static final int abc_ic_commit_search_api_holo_dark=0x7f02001d;
+        public static final int abc_ic_commit_search_api_holo_light=0x7f02001e;
+        public static final int abc_ic_go=0x7f02001f;
+        public static final int abc_ic_go_search_api_holo_light=0x7f020020;
+        public static final int abc_ic_menu_moreoverflow_normal_holo_dark=0x7f020021;
+        public static final int abc_ic_menu_moreoverflow_normal_holo_light=0x7f020022;
+        public static final int abc_ic_menu_share_holo_dark=0x7f020023;
+        public static final int abc_ic_menu_share_holo_light=0x7f020024;
+        public static final int abc_ic_search=0x7f020025;
+        public static final int abc_ic_search_api_holo_light=0x7f020026;
+        public static final int abc_ic_voice_search=0x7f020027;
+        public static final int abc_ic_voice_search_api_holo_light=0x7f020028;
+        public static final int abc_item_background_holo_dark=0x7f020029;
+        public static final int abc_item_background_holo_light=0x7f02002a;
+        public static final int abc_list_divider_holo_dark=0x7f02002b;
+        public static final int abc_list_divider_holo_light=0x7f02002c;
+        public static final int abc_list_focused_holo=0x7f02002d;
+        public static final int abc_list_longpressed_holo=0x7f02002e;
+        public static final int abc_list_pressed_holo_dark=0x7f02002f;
+        public static final int abc_list_pressed_holo_light=0x7f020030;
+        public static final int abc_list_selector_background_transition_holo_dark=0x7f020031;
+        public static final int abc_list_selector_background_transition_holo_light=0x7f020032;
+        public static final int abc_list_selector_disabled_holo_dark=0x7f020033;
+        public static final int abc_list_selector_disabled_holo_light=0x7f020034;
+        public static final int abc_list_selector_holo_dark=0x7f020035;
+        public static final int abc_list_selector_holo_light=0x7f020036;
+        public static final int abc_menu_dropdown_panel_holo_dark=0x7f020037;
+        public static final int abc_menu_dropdown_panel_holo_light=0x7f020038;
+        public static final int abc_menu_hardkey_panel_holo_dark=0x7f020039;
+        public static final int abc_menu_hardkey_panel_holo_light=0x7f02003a;
+        public static final int abc_search_dropdown_dark=0x7f02003b;
+        public static final int abc_search_dropdown_light=0x7f02003c;
+        public static final int abc_spinner_ab_default_holo_dark=0x7f02003d;
+        public static final int abc_spinner_ab_default_holo_light=0x7f02003e;
+        public static final int abc_spinner_ab_disabled_holo_dark=0x7f02003f;
+        public static final int abc_spinner_ab_disabled_holo_light=0x7f020040;
+        public static final int abc_spinner_ab_focused_holo_dark=0x7f020041;
+        public static final int abc_spinner_ab_focused_holo_light=0x7f020042;
+        public static final int abc_spinner_ab_holo_dark=0x7f020043;
+        public static final int abc_spinner_ab_holo_light=0x7f020044;
+        public static final int abc_spinner_ab_pressed_holo_dark=0x7f020045;
+        public static final int abc_spinner_ab_pressed_holo_light=0x7f020046;
+        public static final int abc_tab_indicator_ab_holo=0x7f020047;
+        public static final int abc_tab_selected_focused_holo=0x7f020048;
+        public static final int abc_tab_selected_holo=0x7f020049;
+        public static final int abc_tab_selected_pressed_holo=0x7f02004a;
+        public static final int abc_tab_unselected_pressed_holo=0x7f02004b;
+        public static final int abc_textfield_search_default_holo_dark=0x7f02004c;
+        public static final int abc_textfield_search_default_holo_light=0x7f02004d;
+        public static final int abc_textfield_search_right_default_holo_dark=0x7f02004e;
+        public static final int abc_textfield_search_right_default_holo_light=0x7f02004f;
+        public static final int abc_textfield_search_right_selected_holo_dark=0x7f020050;
+        public static final int abc_textfield_search_right_selected_holo_light=0x7f020051;
+        public static final int abc_textfield_search_selected_holo_dark=0x7f020052;
+        public static final int abc_textfield_search_selected_holo_light=0x7f020053;
+        public static final int abc_textfield_searchview_holo_dark=0x7f020054;
+        public static final int abc_textfield_searchview_holo_light=0x7f020055;
+        public static final int abc_textfield_searchview_right_holo_dark=0x7f020056;
+        public static final int abc_textfield_searchview_right_holo_light=0x7f020057;
+        public static final int activity_medicine_main=0x7f020058;
+        public static final int b7=0x7f020059;
+        public static final int background=0x7f02005a;
+        public static final int bbuton_danger=0x7f02005b;
+        public static final int bbuton_danger_rounded=0x7f02005c;
+        public static final int bbuton_default=0x7f02005d;
+        public static final int bbuton_default_rounded=0x7f02005e;
+        public static final int bbuton_info=0x7f02005f;
+        public static final int bbuton_info_rounded=0x7f020060;
+        public static final int bbuton_inverse=0x7f020061;
+        public static final int bbuton_inverse_rounded=0x7f020062;
+        public static final int bbuton_primary=0x7f020063;
+        public static final int bbuton_primary_rounded=0x7f020064;
+        public static final int bbuton_success=0x7f020065;
+        public static final int bbuton_success_rounded=0x7f020066;
+        public static final int bbuton_warning=0x7f020067;
+        public static final int bbuton_warning_rounded=0x7f020068;
+        public static final int bg073_06=0x7f020069;
+        public static final int blood=0x7f02006a;
+        public static final int blood_check=0x7f02006b;
+        public static final int blue=0x7f02006c;
+        public static final int border=0x7f02006d;
+        public static final int bthumbnail_container_rounded=0x7f02006e;
+        public static final int bthumbnail_container_square=0x7f02006f;
+        public static final int bthumbnail_placeholder_default=0x7f020070;
+        public static final int button=0x7f020071;
+        public static final int button_corners=0x7f020072;
+        public static final int button_des=0x7f020073;
+        public static final int button_normal=0x7f020074;
+        public static final int button_pressed=0x7f020075;
+        public static final int date_number_background=0x7f020076;
+        public static final int day_bg=0x7f020077;
+        public static final int day_selected=0x7f020078;
+        public static final int edittext=0x7f020079;
+        public static final int edittext_background=0x7f02007a;
+        public static final int edittext_background_danger=0x7f02007b;
+        public static final int edittext_background_rounded=0x7f02007c;
+        public static final int edittext_background_rounded_danger=0x7f02007d;
+        public static final int edittext_background_rounded_success=0x7f02007e;
+        public static final int edittext_background_rounded_warning=0x7f02007f;
+        public static final int edittext_background_success=0x7f020080;
+        public static final int edittext_background_warning=0x7f020081;
+        public static final int edittext_des=0x7f020082;
+        public static final int green=0x7f020083;
+        public static final int ic_action_accessibility=0x7f020084;
+        public static final int ic_action_favorite=0x7f020085;
+        public static final int ic_action_loyalty=0x7f020086;
+        public static final int ic_blood=0x7f020087;
+        public static final int ic_dokodemo=0x7f020088;
+        public static final int ic_helth=0x7f020089;
+        public static final int ic_image_colorize=0x7f02008a;
+        public static final int ic_launcher=0x7f02008b;
+        public static final int ic_library=0x7f02008c;
+        public static final int ic_maps_local_hospital=0x7f02008d;
+        public static final int ic_maps_local_restaurant=0x7f02008e;
+        public static final int item_background=0x7f02008f;
+        public static final int navigation_next_item=0x7f020090;
+        public static final int navigation_previous_item=0x7f020091;
+        public static final int normal_day=0x7f020092;
+        public static final int note=0x7f020093;
+        public static final int orange=0x7f020094;
+        public static final int purple=0x7f020095;
+        public static final int quickcontact_badge_overlay_normal_light=0x7f020096;
+        public static final int red=0x7f020097;
+        public static final int snow=0x7f020098;
+        public static final int tabb=0x7f020099;
+        public static final int test_selector_switch_background=0x7f02009a;
+        public static final int test_selector_switch_thumb=0x7f02009b;
+        public static final int textview_des1=0x7f02009c;
+        public static final int textview_des2=0x7f02009d;
+        public static final int thumbnail_circle=0x7f02009e;
+        public static final int thumbnail_circle_container=0x7f02009f;
+        public static final int thumbnail_circle_minimal=0x7f0200a0;
+        public static final int today=0x7f0200a1;
     }
     public static final class id {
-        public static final int RelativeLayout1=0x7f05003d;
+        public static final int LinearLayout1=0x7f050064;
+        public static final int LinearLayout2=0x7f05008e;
+        public static final int RelativeLayout1=0x7f050079;
         public static final int action_bar=0x7f05001c;
         public static final int action_bar_activity_content=0x7f050015;
         public static final int action_bar_container=0x7f05001b;
@@ -1006,39 +1295,100 @@ containing a value of this type.
         public static final int action_menu_divider=0x7f050016;
         public static final int action_menu_presenter=0x7f050017;
         public static final int action_mode_close_button=0x7f050024;
-        public static final int action_settings=0x7f05004d;
+        public static final int action_settings=0x7f0500a2;
         public static final int activity_chooser_view_content=0x7f050025;
         public static final int always=0x7f05000b;
         public static final int beginning=0x7f050011;
-        public static final int button1=0x7f050041;
-        public static final int button2=0x7f050042;
+        public static final int bg=0x7f05008c;
+        public static final int blood_cancel=0x7f050060;
+        public static final int blood_clear=0x7f050062;
+        public static final int blood_ok=0x7f050061;
+        public static final int btnOK=0x7f05005c;
+        public static final int button1=0x7f050043;
+        public static final int button2=0x7f05007a;
+        public static final int button3=0x7f05008f;
+        public static final int calendar=0x7f050053;
+        public static final int cancel=0x7f05004f;
+        public static final int check_list=0x7f05005b;
         public static final int checkbox=0x7f05002d;
+        public static final int child=0x7f0500a1;
+        public static final int clear=0x7f050050;
         public static final int collapseActionView=0x7f05000d;
-        public static final int container=0x7f05003c;
+        public static final int container=0x7f050052;
         public static final int default_activity_button=0x7f050028;
         public static final int dialog=0x7f05000e;
+        public static final int dimensionsLabel=0x7f050078;
+        public static final int dinner_btn1=0x7f05004a;
+        public static final int dinner_btn2=0x7f05004b;
         public static final int disableHome=0x7f050008;
         public static final int dropdown=0x7f05000f;
+        public static final int editText1=0x7f050083;
+        public static final int editText2=0x7f050084;
+        public static final int editText3=0x7f050085;
+        public static final int edit_Text1=0x7f050087;
         public static final int edit_query=0x7f050030;
         public static final int end=0x7f050013;
         public static final int expand_activities_button=0x7f050026;
         public static final int expanded_menu=0x7f05002c;
-        public static final int gridLayout1=0x7f050044;
+        public static final int face=0x7f05009f;
+        public static final int gridLayout1=0x7f05007c;
         public static final int home=0x7f050014;
         public static final int homeAsUp=0x7f050005;
         public static final int icon=0x7f05002a;
         public static final int ifRoom=0x7f05000a;
         public static final int image=0x7f050027;
+        public static final int imageButton1=0x7f050055;
+        public static final int imageButton2=0x7f050056;
+        public static final int imageButton3=0x7f050058;
+        public static final int imageButton4=0x7f050059;
+        public static final int imageView1=0x7f050044;
+        public static final int imageView2=0x7f050045;
+        public static final int imageView3=0x7f050080;
+        public static final int imageView4=0x7f05007f;
+        public static final int imageView5=0x7f050081;
+        public static final int imageView6=0x7f050082;
+        public static final int layout=0x7f050072;
+        public static final int layout1=0x7f050054;
+        public static final int layout_root=0x7f050086;
+        public static final int lblColA=0x7f050096;
+        public static final int lblColB=0x7f050097;
+        public static final int lblLeft=0x7f050073;
+        public static final int lblMiddle=0x7f050074;
+        public static final int lblRight=0x7f050075;
+        public static final int lblSubTitle=0x7f050095;
+        public static final int lblText=0x7f05008b;
+        public static final int lblTitle=0x7f050094;
+        public static final int linearLayout1=0x7f050063;
         public static final int listMode=0x7f050001;
+        public static final int listView1=0x7f05008a;
         public static final int list_item=0x7f050029;
+        public static final int listview1_delete=0x7f0500a4;
+        public static final int listview1_edit=0x7f0500a3;
+        public static final int lunch_btn1=0x7f050048;
+        public static final int lunch_btn2=0x7f050049;
         public static final int middle=0x7f050012;
+        public static final int morning_btn1=0x7f050046;
+        public static final int morning_btn2=0x7f050047;
         public static final int never=0x7f050009;
+        public static final int night_btn1=0x7f05004c;
         public static final int none=0x7f050010;
         public static final int normal=0x7f050000;
+        public static final int numberPicker1=0x7f05004e;
+        public static final int numberPicker2=0x7f05004d;
+        public static final int numberPicker3=0x7f050065;
+        public static final int numberPicker4=0x7f050066;
+        public static final int ok=0x7f050051;
+        public static final int padding=0x7f05009d;
+        public static final int placeholder=0x7f050077;
         public static final int progress_circular=0x7f050018;
         public static final int progress_horizontal=0x7f050019;
         public static final int radio=0x7f05002f;
-        public static final int scrollView1=0x7f050043;
+        public static final int relativeLayout1=0x7f050093;
+        public static final int relativeLayout2=0x7f050090;
+        public static final int relativeLayout3=0x7f050091;
+        public static final int relativeLayout4=0x7f050092;
+        public static final int rl=0x7f05007d;
+        public static final int scrollView1=0x7f05007b;
         public static final int search_badge=0x7f050032;
         public static final int search_bar=0x7f050031;
         public static final int search_button=0x7f050033;
@@ -1049,28 +1399,52 @@ containing a value of this type.
         public static final int search_plate=0x7f050036;
         public static final int search_src_text=0x7f050037;
         public static final int search_voice_btn=0x7f05003b;
+        public static final int shadow=0x7f05009e;
         public static final int shortcut=0x7f05002e;
         public static final int showCustom=0x7f050007;
         public static final int showHome=0x7f050004;
         public static final int showTitle=0x7f050006;
+        public static final int sign_layout_root=0x7f050088;
+        public static final int spinner1=0x7f050042;
         public static final int split_action_bar=0x7f05001e;
+        public static final int state=0x7f0500a0;
         public static final int submit_area=0x7f050039;
-        public static final int tab1=0x7f050045;
-        public static final int tab2=0x7f050046;
-        public static final int tab3=0x7f050047;
-        public static final int tab4=0x7f050049;
-        public static final int tab5=0x7f05004b;
+        public static final int switch1=0x7f05006f;
+        public static final int tab1=0x7f050098;
+        public static final int tab2=0x7f050099;
+        public static final int tab3=0x7f05009a;
+        public static final int tab4=0x7f05009b;
+        public static final int tab5=0x7f05009c;
         public static final int tabMode=0x7f050002;
-        public static final int textView1=0x7f05003e;
-        public static final int textView2=0x7f05003f;
-        public static final int textView3=0x7f050040;
-        public static final int textView4=0x7f050048;
-        public static final int textView5=0x7f05004a;
-        public static final int textView6=0x7f05004c;
+        public static final int textView1=0x7f05003f;
+        public static final int textView10=0x7f05006d;
+        public static final int textView11=0x7f05006b;
+        public static final int textView12=0x7f05006c;
+        public static final int textView13=0x7f050071;
+        public static final int textView14=0x7f050070;
+        public static final int textView2=0x7f050057;
+        public static final int textView3=0x7f05003d;
+        public static final int textView4=0x7f050040;
+        public static final int textView5=0x7f05005d;
+        public static final int textView6=0x7f05005e;
+        public static final int textView7=0x7f05005f;
+        public static final int textView8=0x7f05006a;
+        public static final int textView9=0x7f05006e;
+        public static final int time=0x7f05005a;
+        public static final int timezone=0x7f050089;
         public static final int title=0x7f05002b;
+        public static final int today_frame=0x7f05007e;
         public static final int top_action_bar=0x7f050020;
+        public static final int tv=0x7f05008d;
+        public static final int txtOne=0x7f05003c;
+        public static final int txtText=0x7f050076;
+        public static final int txtThree=0x7f050041;
+        public static final int txtTwo=0x7f05003e;
         public static final int up=0x7f050021;
         public static final int useLogo=0x7f050003;
+        public static final int weight_cancel=0x7f050067;
+        public static final int weight_clear=0x7f050069;
+        public static final int weight_ok=0x7f050068;
         public static final int withText=0x7f05000c;
     }
     public static final class integer {
@@ -1122,42 +1496,78 @@ containing a value of this type.
         public static final int abc_popup_menu_item_layout=0x7f030014;
         public static final int abc_search_dropdown_item_icons_2line=0x7f030015;
         public static final int abc_search_view=0x7f030016;
-        public static final int activity_blood_main=0x7f030017;
-        public static final int activity_cal_main=0x7f030018;
-        public static final int activity_dokodemo_main=0x7f030019;
-        public static final int activity_food_main=0x7f03001a;
-        public static final int activity_graph_main=0x7f03001b;
-        public static final int activity_home_main=0x7f03001c;
-        public static final int activity_login_main=0x7f03001d;
-        public static final int activity_medicine_main=0x7f03001e;
-        public static final int activity_show_main=0x7f03001f;
-        public static final int activity_vital_main=0x7f030020;
-        public static final int calendar_date=0x7f030021;
-        public static final int calendar_main=0x7f030022;
-        public static final int calendar_week=0x7f030023;
-        public static final int fragment_blood_main=0x7f030024;
-        public static final int fragment_cal_main=0x7f030025;
-        public static final int fragment_dokodemo_main=0x7f030026;
-        public static final int fragment_food_main=0x7f030027;
-        public static final int fragment_graph_main=0x7f030028;
-        public static final int fragment_home_main=0x7f030029;
-        public static final int fragment_login_main=0x7f03002a;
-        public static final int fragment_medicine_main=0x7f03002b;
-        public static final int fragment_show_main=0x7f03002c;
-        public static final int fragment_vital_main=0x7f03002d;
-        public static final int show_main=0x7f03002e;
-        public static final int support_simple_spinner_dropdown_item=0x7f03002f;
+        public static final int activity_blood_blood=0x7f030017;
+        public static final int activity_blood_main=0x7f030018;
+        public static final int activity_blood_showdialog=0x7f030019;
+        public static final int activity_cal_main=0x7f03001a;
+        public static final int activity_dokodemo_main=0x7f03001b;
+        public static final int activity_food_main=0x7f03001c;
+        public static final int activity_ggggggg_main=0x7f03001d;
+        public static final int activity_graph_main=0x7f03001e;
+        public static final int activity_home_main=0x7f03001f;
+        public static final int activity_login_main=0x7f030020;
+        public static final int activity_medicine_main=0x7f030021;
+        public static final int activity_show_main=0x7f030022;
+        public static final int activity_vital_dialog_blood=0x7f030023;
+        public static final int activity_vital_dialog_temperature=0x7f030024;
+        public static final int activity_vital_dialog_weight=0x7f030025;
+        public static final int activity_vital_main=0x7f030026;
+        public static final int bootstrap_button=0x7f030027;
+        public static final int bootstrap_edit_text=0x7f030028;
+        public static final int bootstrap_thumbnail=0x7f030029;
+        public static final int bootstrap_thumbnail_circle=0x7f03002a;
+        public static final int calendar_date=0x7f03002b;
+        public static final int calendar_main=0x7f03002c;
+        public static final int calendar_week=0x7f03002d;
+        public static final int card_type=0x7f03002e;
+        public static final int day_of_week=0x7f03002f;
+        public static final int day_view=0x7f030030;
+        public static final int dialog=0x7f030031;
+        public static final int dialog_kcal=0x7f030032;
+        public static final int dialog_signup=0x7f030033;
+        public static final int font_awesome_text=0x7f030034;
+        public static final int food_change_lisv_layout=0x7f030035;
+        public static final int fragment_blood_main=0x7f030036;
+        public static final int fragment_cal_main=0x7f030037;
+        public static final int fragment_dokodemo_main=0x7f030038;
+        public static final int fragment_food_change_select=0x7f030039;
+        public static final int fragment_food_main=0x7f03003a;
+        public static final int fragment_food_manage_select=0x7f03003b;
+        public static final int fragment_food_sign_up=0x7f03003c;
+        public static final int fragment_ggggggg_main=0x7f03003d;
+        public static final int fragment_graph_main=0x7f03003e;
+        public static final int fragment_home_main=0x7f03003f;
+        public static final int fragment_login_main=0x7f030040;
+        public static final int fragment_medicine_main=0x7f030041;
+        public static final int fragment_show_main=0x7f030042;
+        public static final int fragment_vital_main=0x7f030043;
+        public static final int health=0x7f030044;
+        public static final int information=0x7f030045;
+        public static final int log_out=0x7f030046;
+        public static final int one_time=0x7f030047;
+        public static final int row_title=0x7f030048;
+        public static final int row_title_and_subtitle=0x7f030049;
+        public static final int row_two_columns=0x7f03004a;
+        public static final int show_main=0x7f03004b;
+        public static final int spinner_item=0x7f03004c;
+        public static final int support_simple_spinner_dropdown_item=0x7f03004d;
     }
     public static final class menu {
         public static final int blood_main=0x7f0d0000;
         public static final int dokodemo_main=0x7f0d0001;
-        public static final int food_main=0x7f0d0002;
-        public static final int graph_main=0x7f0d0003;
-        public static final int home_main=0x7f0d0004;
-        public static final int login_main=0x7f0d0005;
-        public static final int medicine_main=0x7f0d0006;
-        public static final int show_main=0x7f0d0007;
-        public static final int vital_main=0x7f0d0008;
+        public static final int food_change_select=0x7f0d0002;
+        public static final int food_main=0x7f0d0003;
+        public static final int food_manage_select=0x7f0d0004;
+        public static final int food_sign_up=0x7f0d0005;
+        public static final int ggggggg_main=0x7f0d0006;
+        public static final int graph_main=0x7f0d0007;
+        public static final int home_main=0x7f0d0008;
+        public static final int listview1_context=0x7f0d0009;
+        public static final int login_main=0x7f0d000a;
+        public static final int main=0x7f0d000b;
+        public static final int medicine_main=0x7f0d000c;
+        public static final int show_main=0x7f0d000d;
+        public static final int vital_main=0x7f0d000e;
     }
     public static final class string {
         /**  Content description for the action bar "home" affordance. [CHAR LIMIT=NONE] 
@@ -1200,19 +1610,30 @@ containing a value of this type.
         /**  Description of a share target (both in the list of such or the default share button) in a ShareActionProvider (share UI). [CHAR LIMIT=NONE] 
          */
         public static final int abc_shareactionprovider_share_with_application=0x7f0a000b;
-        public static final int action_settings=0x7f0a000f;
+        public static final int action_settings=0x7f0a000e;
         public static final int app_name=0x7f0a000d;
-        public static final int btn_month_next=0x7f0a0018;
-        public static final int btn_month_prev=0x7f0a0019;
-        public static final int hello_world=0x7f0a000e;
-        public static final int title_activity_blood_main=0x7f0a0010;
-        public static final int title_activity_food_main=0x7f0a0011;
-        public static final int title_activity_graph_main=0x7f0a0012;
-        public static final int title_activity_home_main=0x7f0a0013;
-        public static final int title_activity_login_main=0x7f0a0014;
-        public static final int title_activity_medicine_main=0x7f0a0015;
-        public static final int title_activity_show_main=0x7f0a0016;
-        public static final int title_activity_vital_main=0x7f0a0017;
+        public static final int btn_month_next=0x7f0a0023;
+        public static final int btn_month_prev=0x7f0a0024;
+        public static final int friday=0x7f0a0014;
+        public static final int hello_world=0x7f0a000f;
+        public static final int monday=0x7f0a0010;
+        public static final int saturday=0x7f0a0015;
+        public static final int sunday=0x7f0a0016;
+        public static final int thursday=0x7f0a0013;
+        public static final int title_activity_blood_main=0x7f0a0017;
+        public static final int title_activity_cal_main=0x7f0a001e;
+        public static final int title_activity_food_change_select=0x7f0a0021;
+        public static final int title_activity_food_main=0x7f0a0018;
+        public static final int title_activity_food_mane=0x7f0a0020;
+        public static final int title_activity_food_sign_up=0x7f0a0022;
+        public static final int title_activity_graph_main=0x7f0a0019;
+        public static final int title_activity_home_main=0x7f0a001a;
+        public static final int title_activity_login_main=0x7f0a001b;
+        public static final int title_activity_medicine_main=0x7f0a001c;
+        public static final int title_activity_show_main=0x7f0a001d;
+        public static final int title_activity_vital_main=0x7f0a001f;
+        public static final int tuesday=0x7f0a0011;
+        public static final int wednesday=0x7f0a0012;
     }
     public static final class style {
         /** 
@@ -1235,9 +1656,51 @@ containing a value of this type.
         res/values-v11/styles.xml on API 14+ devices.
     
  API 14 theme customizations can go here. 
+
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+    
+
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        
+
+        Base application theme for API 11+. This theme completely replaces
+        AppBaseTheme from res/values/styles.xml on API 11+ devices.
+    
+ API 11 theme customizations can go here. 
+
+        Base application theme for API 14+. This theme completely replaces
+        AppBaseTheme from BOTH res/values/styles.xml and
+        res/values-v11/styles.xml on API 14+ devices.
+    
+ API 14 theme customizations can go here. 
+
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+    
+
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        
+
+        Base application theme for API 11+. This theme completely replaces
+        AppBaseTheme from res/values/styles.xml on API 11+ devices.
+    
+ API 11 theme customizations can go here. 
+
+        Base application theme for API 14+. This theme completely replaces
+        AppBaseTheme from BOTH res/values/styles.xml and
+        res/values-v11/styles.xml on API 14+ devices.
+    
+ API 14 theme customizations can go here. 
          */
         public static final int AppBaseTheme=0x7f0b0083;
         /**  Application theme. 
+ All customizations that are NOT specific to a particular API-level can go here. 
+ Application theme. 
  All customizations that are NOT specific to a particular API-level can go here. 
          */
         public static final int AppTheme=0x7f0b0084;
@@ -2012,6 +2475,420 @@ containing a value of this type.
           @attr name jp.ac.kcska.dokodemo:initialActivityCount
         */
         public static final int ActivityChooserView_initialActivityCount = 0;
+        /** Attributes that can be used with a BootstrapButton.
+           <p>Includes the following attributes:</p>
+           <table>
+           <colgroup align="left" />
+           <colgroup align="left" />
+           <tr><th>Attribute</th><th>Description</th></tr>
+           <tr><td><code>{@link #BootstrapButton_android_enabled android:enabled}</code></td><td></td></tr>
+           <tr><td><code>{@link #BootstrapButton_android_layout_weight android:layout_weight}</code></td><td></td></tr>
+           <tr><td><code>{@link #BootstrapButton_android_layout_width android:layout_width}</code></td><td></td></tr>
+           <tr><td><code>{@link #BootstrapButton_android_text android:text}</code></td><td></td></tr>
+           <tr><td><code>{@link #BootstrapButton_android_textSize android:textSize}</code></td><td></td></tr>
+           <tr><td><code>{@link #BootstrapButton_bb_icon_left jp.ac.kcska.dokodemo:bb_icon_left}</code></td><td></td></tr>
+           <tr><td><code>{@link #BootstrapButton_bb_icon_right jp.ac.kcska.dokodemo:bb_icon_right}</code></td><td></td></tr>
+           <tr><td><code>{@link #BootstrapButton_bb_roundedCorners jp.ac.kcska.dokodemo:bb_roundedCorners}</code></td><td></td></tr>
+           <tr><td><code>{@link #BootstrapButton_bb_size jp.ac.kcska.dokodemo:bb_size}</code></td><td></td></tr>
+           <tr><td><code>{@link #BootstrapButton_bb_text_alignment jp.ac.kcska.dokodemo:bb_text_alignment}</code></td><td></td></tr>
+           <tr><td><code>{@link #BootstrapButton_bb_text_gravity jp.ac.kcska.dokodemo:bb_text_gravity}</code></td><td></td></tr>
+           <tr><td><code>{@link #BootstrapButton_bb_type jp.ac.kcska.dokodemo:bb_type}</code></td><td></td></tr>
+           </table>
+           @see #BootstrapButton_android_enabled
+           @see #BootstrapButton_android_layout_weight
+           @see #BootstrapButton_android_layout_width
+           @see #BootstrapButton_android_text
+           @see #BootstrapButton_android_textSize
+           @see #BootstrapButton_bb_icon_left
+           @see #BootstrapButton_bb_icon_right
+           @see #BootstrapButton_bb_roundedCorners
+           @see #BootstrapButton_bb_size
+           @see #BootstrapButton_bb_text_alignment
+           @see #BootstrapButton_bb_text_gravity
+           @see #BootstrapButton_bb_type
+         */
+        public static final int[] BootstrapButton = {
+            0x0101000e, 0x01010095, 0x010100f4, 0x0101014f,
+            0x01010181, 0x7f01006a, 0x7f01006b, 0x7f01006c,
+            0x7f01006d, 0x7f01006e, 0x7f01006f, 0x7f010070
+        };
+        /**
+          <p>This symbol is the offset where the {@link android.R.attr#enabled}
+          attribute's value can be found in the {@link #BootstrapButton} array.
+          @attr name android:enabled
+        */
+        public static final int BootstrapButton_android_enabled = 0;
+        /**
+          <p>This symbol is the offset where the {@link android.R.attr#layout_weight}
+          attribute's value can be found in the {@link #BootstrapButton} array.
+          @attr name android:layout_weight
+        */
+        public static final int BootstrapButton_android_layout_weight = 4;
+        /**
+          <p>This symbol is the offset where the {@link android.R.attr#layout_width}
+          attribute's value can be found in the {@link #BootstrapButton} array.
+          @attr name android:layout_width
+        */
+        public static final int BootstrapButton_android_layout_width = 2;
+        /**
+          <p>This symbol is the offset where the {@link android.R.attr#text}
+          attribute's value can be found in the {@link #BootstrapButton} array.
+          @attr name android:text
+        */
+        public static final int BootstrapButton_android_text = 3;
+        /**
+          <p>This symbol is the offset where the {@link android.R.attr#textSize}
+          attribute's value can be found in the {@link #BootstrapButton} array.
+          @attr name android:textSize
+        */
+        public static final int BootstrapButton_android_textSize = 1;
+        /**
+          <p>This symbol is the offset where the {@link jp.ac.kcska.dokodemo.R.attr#bb_icon_left}
+          attribute's value can be found in the {@link #BootstrapButton} array.
+
+
+          <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name jp.ac.kcska.dokodemo:bb_icon_left
+        */
+        public static final int BootstrapButton_bb_icon_left = 6;
+        /**
+          <p>This symbol is the offset where the {@link jp.ac.kcska.dokodemo.R.attr#bb_icon_right}
+          attribute's value can be found in the {@link #BootstrapButton} array.
+
+
+          <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name jp.ac.kcska.dokodemo:bb_icon_right
+        */
+        public static final int BootstrapButton_bb_icon_right = 7;
+        /**
+          <p>This symbol is the offset where the {@link jp.ac.kcska.dokodemo.R.attr#bb_roundedCorners}
+          attribute's value can be found in the {@link #BootstrapButton} array.
+
+
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name jp.ac.kcska.dokodemo:bb_roundedCorners
+        */
+        public static final int BootstrapButton_bb_roundedCorners = 8;
+        /**
+          <p>This symbol is the offset where the {@link jp.ac.kcska.dokodemo.R.attr#bb_size}
+          attribute's value can be found in the {@link #BootstrapButton} array.
+
+
+          <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name jp.ac.kcska.dokodemo:bb_size
+        */
+        public static final int BootstrapButton_bb_size = 10;
+        /**
+          <p>This symbol is the offset where the {@link jp.ac.kcska.dokodemo.R.attr#bb_text_alignment}
+          attribute's value can be found in the {@link #BootstrapButton} array.
+
+
+          <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name jp.ac.kcska.dokodemo:bb_text_alignment
+        */
+        public static final int BootstrapButton_bb_text_alignment = 9;
+        /**
+          <p>This symbol is the offset where the {@link jp.ac.kcska.dokodemo.R.attr#bb_text_gravity}
+          attribute's value can be found in the {@link #BootstrapButton} array.
+
+
+          <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name jp.ac.kcska.dokodemo:bb_text_gravity
+        */
+        public static final int BootstrapButton_bb_text_gravity = 11;
+        /**
+          <p>This symbol is the offset where the {@link jp.ac.kcska.dokodemo.R.attr#bb_type}
+          attribute's value can be found in the {@link #BootstrapButton} array.
+
+
+          <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name jp.ac.kcska.dokodemo:bb_type
+        */
+        public static final int BootstrapButton_bb_type = 5;
+        /** Attributes that can be used with a BootstrapCircleThumbnail.
+           <p>Includes the following attributes:</p>
+           <table>
+           <colgroup align="left" />
+           <colgroup align="left" />
+           <tr><th>Attribute</th><th>Description</th></tr>
+           <tr><td><code>{@link #BootstrapCircleThumbnail_android_text android:text}</code></td><td></td></tr>
+           <tr><td><code>{@link #BootstrapCircleThumbnail_bct_image jp.ac.kcska.dokodemo:bct_image}</code></td><td></td></tr>
+           <tr><td><code>{@link #BootstrapCircleThumbnail_bct_minimal jp.ac.kcska.dokodemo:bct_minimal}</code></td><td></td></tr>
+           <tr><td><code>{@link #BootstrapCircleThumbnail_bct_size jp.ac.kcska.dokodemo:bct_size}</code></td><td></td></tr>
+           </table>
+           @see #BootstrapCircleThumbnail_android_text
+           @see #BootstrapCircleThumbnail_bct_image
+           @see #BootstrapCircleThumbnail_bct_minimal
+           @see #BootstrapCircleThumbnail_bct_size
+         */
+        public static final int[] BootstrapCircleThumbnail = {
+            0x0101014f, 0x7f010079, 0x7f01007a, 0x7f01007b
+        };
+        /**
+          <p>This symbol is the offset where the {@link android.R.attr#text}
+          attribute's value can be found in the {@link #BootstrapCircleThumbnail} array.
+          @attr name android:text
+        */
+        public static final int BootstrapCircleThumbnail_android_text = 0;
+        /**
+          <p>This symbol is the offset where the {@link jp.ac.kcska.dokodemo.R.attr#bct_image}
+          attribute's value can be found in the {@link #BootstrapCircleThumbnail} array.
+
+
+          <p>Must be an integer value, such as "<code>100</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name jp.ac.kcska.dokodemo:bct_image
+        */
+        public static final int BootstrapCircleThumbnail_bct_image = 1;
+        /**
+          <p>This symbol is the offset where the {@link jp.ac.kcska.dokodemo.R.attr#bct_minimal}
+          attribute's value can be found in the {@link #BootstrapCircleThumbnail} array.
+
+
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name jp.ac.kcska.dokodemo:bct_minimal
+        */
+        public static final int BootstrapCircleThumbnail_bct_minimal = 3;
+        /**
+          <p>This symbol is the offset where the {@link jp.ac.kcska.dokodemo.R.attr#bct_size}
+          attribute's value can be found in the {@link #BootstrapCircleThumbnail} array.
+
+
+          <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name jp.ac.kcska.dokodemo:bct_size
+        */
+        public static final int BootstrapCircleThumbnail_bct_size = 2;
+        /** Attributes that can be used with a BootstrapEditText.
+           <p>Includes the following attributes:</p>
+           <table>
+           <colgroup align="left" />
+           <colgroup align="left" />
+           <tr><th>Attribute</th><th>Description</th></tr>
+           <tr><td><code>{@link #BootstrapEditText_android_enabled android:enabled}</code></td><td></td></tr>
+           <tr><td><code>{@link #BootstrapEditText_android_hint android:hint}</code></td><td></td></tr>
+           <tr><td><code>{@link #BootstrapEditText_android_text android:text}</code></td><td></td></tr>
+           <tr><td><code>{@link #BootstrapEditText_android_textSize android:textSize}</code></td><td></td></tr>
+           <tr><td><code>{@link #BootstrapEditText_be_roundedCorners jp.ac.kcska.dokodemo:be_roundedCorners}</code></td><td></td></tr>
+           <tr><td><code>{@link #BootstrapEditText_be_state jp.ac.kcska.dokodemo:be_state}</code></td><td></td></tr>
+           </table>
+           @see #BootstrapEditText_android_enabled
+           @see #BootstrapEditText_android_hint
+           @see #BootstrapEditText_android_text
+           @see #BootstrapEditText_android_textSize
+           @see #BootstrapEditText_be_roundedCorners
+           @see #BootstrapEditText_be_state
+         */
+        public static final int[] BootstrapEditText = {
+            0x0101000e, 0x01010095, 0x0101014f, 0x01010150,
+            0x7f010072, 0x7f010073
+        };
+        /**
+          <p>This symbol is the offset where the {@link android.R.attr#enabled}
+          attribute's value can be found in the {@link #BootstrapEditText} array.
+          @attr name android:enabled
+        */
+        public static final int BootstrapEditText_android_enabled = 0;
+        /**
+          <p>This symbol is the offset where the {@link android.R.attr#hint}
+          attribute's value can be found in the {@link #BootstrapEditText} array.
+          @attr name android:hint
+        */
+        public static final int BootstrapEditText_android_hint = 3;
+        /**
+          <p>This symbol is the offset where the {@link android.R.attr#text}
+          attribute's value can be found in the {@link #BootstrapEditText} array.
+          @attr name android:text
+        */
+        public static final int BootstrapEditText_android_text = 2;
+        /**
+          <p>This symbol is the offset where the {@link android.R.attr#textSize}
+          attribute's value can be found in the {@link #BootstrapEditText} array.
+          @attr name android:textSize
+        */
+        public static final int BootstrapEditText_android_textSize = 1;
+        /**
+          <p>This symbol is the offset where the {@link jp.ac.kcska.dokodemo.R.attr#be_roundedCorners}
+          attribute's value can be found in the {@link #BootstrapEditText} array.
+
+
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name jp.ac.kcska.dokodemo:be_roundedCorners
+        */
+        public static final int BootstrapEditText_be_roundedCorners = 4;
+        /**
+          <p>This symbol is the offset where the {@link jp.ac.kcska.dokodemo.R.attr#be_state}
+          attribute's value can be found in the {@link #BootstrapEditText} array.
+
+
+          <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name jp.ac.kcska.dokodemo:be_state
+        */
+        public static final int BootstrapEditText_be_state = 5;
+        /** Attributes that can be used with a BootstrapThumbnail.
+           <p>Includes the following attributes:</p>
+           <table>
+           <colgroup align="left" />
+           <colgroup align="left" />
+           <tr><th>Attribute</th><th>Description</th></tr>
+           <tr><td><code>{@link #BootstrapThumbnail_android_text android:text}</code></td><td></td></tr>
+           <tr><td><code>{@link #BootstrapThumbnail_bt_height jp.ac.kcska.dokodemo:bt_height}</code></td><td></td></tr>
+           <tr><td><code>{@link #BootstrapThumbnail_bt_image jp.ac.kcska.dokodemo:bt_image}</code></td><td></td></tr>
+           <tr><td><code>{@link #BootstrapThumbnail_bt_inside_padding jp.ac.kcska.dokodemo:bt_inside_padding}</code></td><td></td></tr>
+           <tr><td><code>{@link #BootstrapThumbnail_bt_roundedCorners jp.ac.kcska.dokodemo:bt_roundedCorners}</code></td><td></td></tr>
+           <tr><td><code>{@link #BootstrapThumbnail_bt_width jp.ac.kcska.dokodemo:bt_width}</code></td><td></td></tr>
+           </table>
+           @see #BootstrapThumbnail_android_text
+           @see #BootstrapThumbnail_bt_height
+           @see #BootstrapThumbnail_bt_image
+           @see #BootstrapThumbnail_bt_inside_padding
+           @see #BootstrapThumbnail_bt_roundedCorners
+           @see #BootstrapThumbnail_bt_width
+         */
+        public static final int[] BootstrapThumbnail = {
+            0x0101014f, 0x7f010074, 0x7f010075, 0x7f010076,
+            0x7f010077, 0x7f010078
+        };
+        /**
+          <p>This symbol is the offset where the {@link android.R.attr#text}
+          attribute's value can be found in the {@link #BootstrapThumbnail} array.
+          @attr name android:text
+        */
+        public static final int BootstrapThumbnail_android_text = 0;
+        /**
+          <p>This symbol is the offset where the {@link jp.ac.kcska.dokodemo.R.attr#bt_height}
+          attribute's value can be found in the {@link #BootstrapThumbnail} array.
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name jp.ac.kcska.dokodemo:bt_height
+        */
+        public static final int BootstrapThumbnail_bt_height = 4;
+        /**
+          <p>This symbol is the offset where the {@link jp.ac.kcska.dokodemo.R.attr#bt_image}
+          attribute's value can be found in the {@link #BootstrapThumbnail} array.
+
+
+          <p>Must be an integer value, such as "<code>100</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name jp.ac.kcska.dokodemo:bt_image
+        */
+        public static final int BootstrapThumbnail_bt_image = 2;
+        /**
+          <p>This symbol is the offset where the {@link jp.ac.kcska.dokodemo.R.attr#bt_inside_padding}
+          attribute's value can be found in the {@link #BootstrapThumbnail} array.
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name jp.ac.kcska.dokodemo:bt_inside_padding
+        */
+        public static final int BootstrapThumbnail_bt_inside_padding = 5;
+        /**
+          <p>This symbol is the offset where the {@link jp.ac.kcska.dokodemo.R.attr#bt_roundedCorners}
+          attribute's value can be found in the {@link #BootstrapThumbnail} array.
+
+
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name jp.ac.kcska.dokodemo:bt_roundedCorners
+        */
+        public static final int BootstrapThumbnail_bt_roundedCorners = 1;
+        /**
+          <p>This symbol is the offset where the {@link jp.ac.kcska.dokodemo.R.attr#bt_width}
+          attribute's value can be found in the {@link #BootstrapThumbnail} array.
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name jp.ac.kcska.dokodemo:bt_width
+        */
+        public static final int BootstrapThumbnail_bt_width = 3;
         /** Attributes that can be used with a CompatTextView.
            <p>Includes the following attributes:</p>
            <table>
@@ -2038,6 +2915,49 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           @attr name jp.ac.kcska.dokodemo:textAllCaps
         */
         public static final int CompatTextView_textAllCaps = 0;
+        /** Attributes that can be used with a FontAwesomeText.
+           <p>Includes the following attributes:</p>
+           <table>
+           <colgroup align="left" />
+           <colgroup align="left" />
+           <tr><th>Attribute</th><th>Description</th></tr>
+           <tr><td><code>{@link #FontAwesomeText_android_textColor android:textColor}</code></td><td></td></tr>
+           <tr><td><code>{@link #FontAwesomeText_android_textSize android:textSize}</code></td><td></td></tr>
+           <tr><td><code>{@link #FontAwesomeText_fa_icon jp.ac.kcska.dokodemo:fa_icon}</code></td><td></td></tr>
+           </table>
+           @see #FontAwesomeText_android_textColor
+           @see #FontAwesomeText_android_textSize
+           @see #FontAwesomeText_fa_icon
+         */
+        public static final int[] FontAwesomeText = {
+            0x01010095, 0x01010098, 0x7f010071
+        };
+        /**
+          <p>This symbol is the offset where the {@link android.R.attr#textColor}
+          attribute's value can be found in the {@link #FontAwesomeText} array.
+          @attr name android:textColor
+        */
+        public static final int FontAwesomeText_android_textColor = 1;
+        /**
+          <p>This symbol is the offset where the {@link android.R.attr#textSize}
+          attribute's value can be found in the {@link #FontAwesomeText} array.
+          @attr name android:textSize
+        */
+        public static final int FontAwesomeText_android_textSize = 0;
+        /**
+          <p>This symbol is the offset where the {@link jp.ac.kcska.dokodemo.R.attr#fa_icon}
+          attribute's value can be found in the {@link #FontAwesomeText} array.
+
+
+          <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name jp.ac.kcska.dokodemo:fa_icon
+        */
+        public static final int FontAwesomeText_fa_icon = 2;
         /** Attributes that can be used with a LinearLayoutICS.
            <p>Includes the following attributes:</p>
            <table>

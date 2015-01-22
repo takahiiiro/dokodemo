@@ -5,8 +5,9 @@
     android:versionName="1.0" >
 
     <uses-sdk
-        android:minSdkVersion="11"
+        android:minSdkVersion="14"
         android:targetSdkVersion="19" />
+    <uses-permission android:name="android.permission.INTERNET"/>
 
     <application
         android:allowBackup="true"
@@ -14,7 +15,7 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name="jp.ac.kcska.dokodemo.DokodemoMainActivity"
+            android:name="jp.ac.kcska.dokodemo.Login.LoginMainActivity"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -39,7 +40,7 @@
             android:label="@string/title_activity_home_main" >
         </activity>
         <activity
-            android:name="jp.ac.kcska.dokodemo.Login.LoginMainActivity"
+            android:name="jp.ac.kcska.dokodemo.Login.OneTimeActivity"
             android:label="@string/title_activity_login_main" >
         </activity>
         <activity
@@ -51,9 +52,43 @@
             android:label="@string/title_activity_show_main" >
         </activity>
         <activity
+            android:name="jp.ac.kcska.dokodemo.Show.GggggggMainActivity"
+            android:label="@string/title_activity_show_main" >
+        </activity>
+        <activity
             android:name="jp.ac.kcska.dokodemo.Vial.VitalMainActivity"
             android:label="@string/title_activity_vital_main" >
         </activity>
+        <activity
+            android:name="jp.ac.kcska.dokodemo.Home.health"
+            android:label="@string/title_activity_home_main">
+        </activity>
+        <activity 
+            android:name="jp.ac.kcska.dokodemo.Blood.Blood"
+            android:label="@string/title_activity_blood_main">
+        </activity>
+        
+        <activity
+            android:name="jp.ac.kcska.dokodemo.Food.FoodManageSelectActivity"
+            android:configChanges="orientation|screenSize"
+            android:label="@string/title_activity_food_mane"
+            android:uiOptions="splitActionBarWhenNarrow" >
+        </activity>
+        <activity
+            android:name="jp.ac.kcska.dokodemo.Food.FoodChangeSelectActivity"
+            android:configChanges="orientation|screenSize"
+            android:label="@string/title_activity_food_change_select" >
+        </activity>
+        <activity
+            android:name="jp.ac.kcska.dokodemo.Food.FoodSign_upActivity"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:label="@string/title_activity_food_sign_up" >
+        </activity>
+        
+        <provider
+            android:name="com.tyczj.extendedcalendarview.CalendarProvider"
+            android:authorities="com.tyczj.extendedcalendarview.calendarprovider" />
     </application>
 
 </manifest>

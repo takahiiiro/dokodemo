@@ -13,6 +13,9 @@
     <string name="title_activity_show_main">ShowMainActivity</string>
     <string name="title_activity_cal_main">CalMainActivity</string>
     <string name="title_activity_vital_main">VitalMainActivity</string>
+    <string name="title_activity_food_mane">食事管理</string>
+    <string name="title_activity_food_change_select">食事変更選択画面</string>
+    <string name="title_activity_food_sign_up">食事登録画面</string>
     
     <string name="btn_month_next">次へ</string>
     <string name="btn_month_prev">前へ</string>

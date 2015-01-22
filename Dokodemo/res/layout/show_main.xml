@@ -10,55 +10,59 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical" 
-        android:background="@drawable/tabb">
+        android:orientation="vertical" >
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" >
+            android:layout_height="wrap_content"
+            android:background="#f0ffff" >
 
-            <RelativeLayout
-                android:layout_width="wrap_content"
+            <Space
+                android:layout_width="50dp"
                 android:layout_height="match_parent"
-                android:layout_weight="0.09" >
+                android:layout_weight="0.00" />
 
-                <Button
-                    android:id="@+id/button2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentRight="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginRight="28dp"
-                    android:background="@drawable/button"
-                    android:minHeight="42dp"
-                    android:minWidth="55dp"
-                    android:text="＞" />
+            <Button
+                android:id="@+id/button1"
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.00"
+                android:background="@drawable/navigation_previous_item"
+                android:gravity="center" />
 
-                <Button
-                    android:id="@+id/button1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginLeft="30dp"
-                    android:background="@drawable/button"
-                    android:minHeight="42dp"
-                    android:minWidth="55dp"
-                    android:text="＜" />
+            <Space
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.00" />
 
-                <TextView
-                    android:id="@+id/textView1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerHorizontal="true"
-                    android:layout_centerVertical="true"
-                    android:layout_weight="0.09"
-                    android:text="日付"
-                    android:textSize="24dp"
-                    android:background="#F5F5F5" />
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="日付" 
+                android:textSize="18sp"/>
 
-            </RelativeLayout>
+            <Space
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.00" />
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/navigation_next_item"
+                android:fontFamily="SANS_SERIF"
+                android:gravity="center"/>
+
+
         </LinearLayout>
+        
+        <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp" 
+                    android:background="#ffffff"/>
 
         <TabHost
             android:id="@android:id/tabhost"
@@ -73,72 +77,80 @@
                 <TabWidget
                     android:id="@android:id/tabs"
                     android:layout_width="match_parent"
-                    android:layout_height="136dp" >
+                    android:layout_height="58dp"
+                    android:background="#ffffff">
 
                 </TabWidget>
+                
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp"
+                    android:background="#ffffff" />
 
                 <FrameLayout
                     android:id="@android:id/tabcontent"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="@drawable/note" >
+                    android:background="#f0ffff" >
 
                     <LinearLayout
                         android:id="@+id/tab1"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:orientation="horizontal" >
-
+                        android:orientation="horizontal"
+                        android:background="@drawable/ic_maps_local_restaurant">
+                        
                         <TextView
                             android:id="@+id/textView2"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="食事" />
+                            android:layout_height="wrap_content" 
+                            android:textSize="54sp"/>
                     </LinearLayout>
 
                     <LinearLayout
                         android:id="@+id/tab2"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:orientation="horizontal" >
+                        android:orientation="horizontal" 
+                        android:background="@drawable/ic_image_colorize">
 
                         <TextView
                             android:id="@+id/textView3"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="薬剤" />
+                            android:layout_height="wrap_content" />
                     </LinearLayout>
 
                     <LinearLayout
                         android:id="@+id/tab3"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:orientation="horizontal" >
+                        android:orientation="horizontal"
+                        android:background="@drawable/ic_action_loyalty" >
 
                         <TextView
                             android:id="@+id/textView4"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="処方" />
+                            android:layout_height="wrap_content" />
                     </LinearLayout>
 
                     <LinearLayout
                         android:id="@+id/tab4"
                         android:layout_width="match_parent"
-                        android:layout_height="229dp"
-                        android:orientation="horizontal" >
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal" 
+                        android:background="@drawable/ic_maps_local_hospital">
 
                         <TextView
                             android:id="@+id/textView5"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="バイタル" />
+                            android:layout_height="wrap_content" />
                     </LinearLayout>
 
                     <LinearLayout
                         android:id="@+id/tab5"
                         android:layout_width="match_parent"
-                        android:layout_height="229dp" >
+                        android:layout_height="match_parent"
+                        android:background="@drawable/ic_action_favorite">
 
                         <TabWidget
                             android:id="@android:id/tabs"
@@ -149,8 +161,7 @@
                         <TextView
                             android:id="@+id/textView6"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="血糖値" />
+                            android:layout_height="wrap_content" />
                     </LinearLayout>
                 </FrameLayout>
             </LinearLayout>

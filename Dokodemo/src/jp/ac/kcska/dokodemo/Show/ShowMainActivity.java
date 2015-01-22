@@ -6,10 +6,15 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 
+
+
+
+import jp.ac.kcska.dokodemo.R;
 import android.os.Bundle;
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.content.res.Resources;
 import android.webkit.WebView;
 import android.widget.Button;
 import android.widget.TabHost;
@@ -22,12 +27,11 @@ import android.view.View.OnClickListener;
 
 public class ShowMainActivity extends Activity implements OnClickListener{
 	
-	private final String TAG = "íÜâÄ";
+	private final String TAG = "‰∏≠Âúí";
 	private MyTask task;
 	private ProgressDialog dialog;
 	private MyTask asyncGet;
 	TabHost tabhost;
-	
 	TextView tv1,tv2,tv3,tv4,tv5,tv6;
 	Button btn1,btn2;
 	Calendar cal;
@@ -36,7 +40,7 @@ public class ShowMainActivity extends Activity implements OnClickListener{
 	  protected void onCreate(Bundle savedInstanceState) {
 	    super.onCreate(savedInstanceState);
 	    setContentView(R.layout.show_main);
-	    
+	   
 	    cal = Calendar.getInstance();
 	    int year = cal.get(Calendar.YEAR);
 	    int month = cal.get(Calendar.MONTH);
@@ -53,53 +57,88 @@ public class ShowMainActivity extends Activity implements OnClickListener{
 	    tv6 = (TextView)findViewById(R.id.textView6);
 	    btn1 = (Button)findViewById(R.id.button1);
 	    btn2 = (Button)findViewById(R.id.button2);
-	    tv1.setText(year+"îN"+(month+1)+"åé"+day+"ì˙");
+	    tv1.setText(year+"Âπ¥"+(month+1)+"Êúà"+day+"Êó•");
 	    
 	    if(data!=null){
 	    	tv1.setText(data);
 	    }
 	    
+	   
+	    
 	    tv1.setOnClickListener(this);
 	    btn1.setOnClickListener(this);
-	    btn2.setOnClickListener(this);	 
-	    //TabHostÉIÉuÉWÉFÉNÉgéÊìæ      
+	    btn2.setOnClickListener(this);
+	    //TabHostÔøΩIÔøΩuÔøΩWÔøΩFÔøΩNÔøΩgÔøΩÊìæ      
 	    tabhost = (TabHost)findViewById(android.R.id.tabhost);   
 	    tabhost.setup();
-	     
+	    
 	    TabSpec tab1 = tabhost.newTabSpec("tab1"); 
-	    tab1.setIndicator("êHéñ");               
+	    tab1.setIndicator("È£ü‰∫ã");               
 	    tab1.setContent(R.id.tab1);
 	    tabhost.addTab(tab1);                   
 	 
 	    TabSpec tab2 = tabhost.newTabSpec("tab2"); 
-	    tab2.setIndicator("ñÚç‹");               
+	    tab2.setIndicator("Ëñ¨Ââ§");               
 	    tab2.setContent(R.id.tab2);
 	    tabhost.addTab(tab2);
 	     
 	    TabSpec tab3 = tabhost.newTabSpec("tab3"); 
-	    tab3.setIndicator("èàï˚");               
+	    tab3.setIndicator("Âá¶Êñπ"); 
 	    tab3.setContent(R.id.tab3);
 	    tabhost.addTab(tab3);
 	    
 	    TabSpec tab4 = tabhost.newTabSpec("tab4"); 
-	    tab4.setIndicator("ÉoÉCÉ^Éã");               
+	    tab4.setIndicator("„Éê„Ç§„Çø„É´");   
 	    tab4.setContent(R.id.tab4);
 	    tabhost.addTab(tab4);
 	    
 	    TabSpec tab5 = tabhost.newTabSpec("tab5"); 
-	    tab5.setIndicator("ååìúíl");               
+	    tab5.setIndicator("Ë°ÄÁ≥ñÂÄ§");  
 	    tab5.setContent(R.id.tab5);
 	    tabhost.addTab(tab5);
 	 
 	    //tabhost.setCurrentTab(0);
 	    
+	    
+	    asyncGet = new MyTask(new AsyncCallback() {
+            public void onPreExecute() {
+                // do something
+            	dialog = new ProgressDialog(ShowMainActivity.this);
+                dialog.setTitle("Please wait");
+                dialog.setMessage("Loading data...");
+                dialog.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);
+                dialog.setCancelable(true);
+                dialog.setMax(100);
+                dialog.setProgress(0);
+                dialog.show();
+            }
+            public void onProgressUpdate(int progress) {
+            	// do something
+            	dialog.setProgress(progress);
+            }
+            public void onPostExecute(ArrayList<String> result) {
+            	// do something
+            	tv2.setText("");
+            	for(String str : result){
+            		String crlf = System.getProperty("line.separator");
+            		tv2.append(crlf+str);
+            	}
+                dialog.dismiss();
+            }
+            public void onCancelled() {
+            	// do something
+            	dialog.dismiss();
+            }
+        });
+		asyncGet.execute("https://kcsgogo.herokuapp.com/medicines.json");
+		
+	    
 	    tabhost.setOnTabChangedListener(new OnTabChangeListener() {
 	        public void onTabChanged(String tabId) {
-	        	Log.d("ÉpÉuÉäÉbÉNíÜâÄ", "onTabChanged: tab number=" + tabhost.getCurrentTab());
 	            switch (tabhost.getCurrentTab()) {
 	            case 0:
 	                //do what you want when tab 0 is selected
-	            	// É^ÉXÉNÇÃê∂ê¨
+	            	// ÔøΩ^ÔøΩXÔøΩNÔøΩÃêÔøΩÔøΩÔøΩ
 	            	asyncGet = new MyTask(new AsyncCallback() {
 			            public void onPreExecute() {
 			                // do something
@@ -118,7 +157,11 @@ public class ShowMainActivity extends Activity implements OnClickListener{
 			            }
 			            public void onPostExecute(ArrayList<String> result) {
 			            	// do something
-			            	tv2.setText(result.get(0));
+			            	tv2.setText("");
+			            	for(String str : result){
+			            		String crlf = System.getProperty("line.separator");
+			            		tv2.append(crlf+str);
+			            	}
 			                dialog.dismiss();
 			            }
 			            public void onCancelled() {
@@ -126,11 +169,11 @@ public class ShowMainActivity extends Activity implements OnClickListener{
 			            	dialog.dismiss();
 			            }
 			        });
-					asyncGet.execute("http://192.168.33.10:3000/formuras.json");
+					asyncGet.execute("https://kcsgogo.herokuapp.com/medicines.json");
 	                break;
 	            case 1:
 	                //do what you want when tab 1 is selected
-	            	// É^ÉXÉNÇÃê∂ê¨
+	            	// ÔøΩ^ÔøΩXÔøΩNÔøΩÃêÔøΩÔøΩÔøΩ
 	            	asyncGet = new MyTask(new AsyncCallback() {
 			            public void onPreExecute() {
 			                // do something
@@ -149,7 +192,11 @@ public class ShowMainActivity extends Activity implements OnClickListener{
 			            }
 			            public void onPostExecute(ArrayList<String> result) {
 			            	// do something
-			            	tv3.setText(result.get(0));
+			            	tv3.setText("");
+			            	for(String str : result){
+			            		String crlf = System.getProperty("line.separator");
+			            		tv3.append(crlf+str);
+			            	}
 			                dialog.dismiss();
 			            }
 			            public void onCancelled() {
@@ -157,12 +204,12 @@ public class ShowMainActivity extends Activity implements OnClickListener{
 			            	dialog.dismiss();
 			            }
 			        });
-					asyncGet.execute("http://192.168.33.10:3000/formuras.json");
+					asyncGet.execute("https://kcsgogo.herokuapp.com/medicines.json");
 	                break;
 	            case 2:
 	                //do what you want when tab 2 is selected
-	            	// É^ÉXÉNÇÃê∂ê¨
-	            	// É^ÉXÉNÇÃê∂ê¨
+	            	// ÔøΩ^ÔøΩXÔøΩNÔøΩÃêÔøΩÔøΩÔøΩ
+	            	// ÔøΩ^ÔøΩXÔøΩNÔøΩÃêÔøΩÔøΩÔøΩ
 	            	asyncGet = new MyTask(new AsyncCallback() {
 			            public void onPreExecute() {
 			                // do something
@@ -181,7 +228,11 @@ public class ShowMainActivity extends Activity implements OnClickListener{
 			            }
 			            public void onPostExecute(ArrayList<String> result) {
 			            	// do something
-			            	tv4.setText(result.get(0));
+			            	tv4.setText("");
+			            	for(String str : result){
+			            		String crlf = System.getProperty("line.separator");
+			            		tv4.append(crlf+str);
+			            	}
 			                dialog.dismiss();
 			            }
 			            public void onCancelled() {
@@ -189,10 +240,10 @@ public class ShowMainActivity extends Activity implements OnClickListener{
 			            	dialog.dismiss();
 			            }
 			        });
-					asyncGet.execute("http://192.168.33.10:3000/formuras.json");
+					asyncGet.execute("https://kcsgogo.herokuapp.com/medicines.json");
 	                break;
 	            case 3:
-	            	// É^ÉXÉNÇÃê∂ê¨
+	            	// ÔøΩ^ÔøΩXÔøΩNÔøΩÃêÔøΩÔøΩÔøΩ
 	            	asyncGet = new MyTask(new AsyncCallback() {
 			            public void onPreExecute() {
 			                // do something
@@ -211,7 +262,11 @@ public class ShowMainActivity extends Activity implements OnClickListener{
 			            }
 			            public void onPostExecute(ArrayList<String> result) {
 			            	// do something
-			            	tv5.setText(result.get(0));
+			            	tv5.setText("");
+			            	for(String str : result){
+			            		String crlf = System.getProperty("line.separator");
+			            		tv5.append(crlf+str);
+			            	}
 			                dialog.dismiss();
 			            }
 			            public void onCancelled() {
@@ -219,10 +274,10 @@ public class ShowMainActivity extends Activity implements OnClickListener{
 			            	dialog.dismiss();
 			            }
 			        });
-					asyncGet.execute("http://192.168.33.10:3000/formuras.json");
+					asyncGet.execute("https://kcsgogo.herokuapp.com/medicines.json");
 	            	break;
 	            case 4:
-	            	// É^ÉXÉNÇÃê∂ê¨
+	            	// ÔøΩ^ÔøΩXÔøΩNÔøΩÃêÔøΩÔøΩÔøΩ
 	            	asyncGet = new MyTask(new AsyncCallback() {
 			            public void onPreExecute() {
 			                // do something
@@ -241,7 +296,11 @@ public class ShowMainActivity extends Activity implements OnClickListener{
 			            }
 			            public void onPostExecute(ArrayList<String> result) {
 			            	// do something
-			            	tv6.setText(result.get(0));
+			            	tv6.setText("");
+			            	for(String str : result){
+			            		String crlf = System.getProperty("line.separator");
+			            		tv6.append(crlf+str);
+			            	}
 			                dialog.dismiss();
 			            }
 			            public void onCancelled() {
@@ -249,7 +308,7 @@ public class ShowMainActivity extends Activity implements OnClickListener{
 			            	dialog.dismiss();
 			            }
 			        });
-					asyncGet.execute("http://192.168.33.10:3000/formuras.json");
+					asyncGet.execute("https://kcsgogo.herokuapp.com/medicines.json");
 					break;
 	            default:
 	                break;
@@ -268,17 +327,24 @@ public class ShowMainActivity extends Activity implements OnClickListener{
 				  tv1 = (TextView)findViewById(R.id.textView1);
 				  tv1.setText(str);
 				  
-				  Log.d(TAG,str.substring(5,7));
+				  Log.d(TAG,str.substring(8,10));
 				  
 				  cal.set(Calendar.YEAR, Integer.parseInt(str.substring(0,4)));
-				  cal.set(Calendar.MONTH, Integer.parseInt(str.substring(5,7)));
+				  cal.set(Calendar.MONTH, Integer.parseInt(str.substring(5,7))-1);
 				  cal.set(Calendar.DAY_OF_MONTH, Integer.parseInt(str.substring(8,10)));
-				  cal.add(Calendar.MONTH, -1);
+				  /*
+				  Log.d("„ÇÇ„Å£„Åì„Åó‰∏≠Âúí", String.valueOf(cal.get(Calendar.YEAR)));
+				  Log.d("„ÇÇ„Å£„Åì„Åó‰∏≠Âúí Part2", String.valueOf(cal.get(Calendar.MONTH)+1));
+				  Log.d("„ÇÇ„Å£„Åì„Åó‰∏≠Âúí Part3‚òÜ", String.valueOf(cal.get(Calendar.DAY_OF_MONTH)));
+				  */
 			  }
 		  }
 	  }
 
 
+	  
+	  
+	  
 	@Override
 	public void onClick(View v) {
 		
@@ -295,7 +361,7 @@ public class ShowMainActivity extends Activity implements OnClickListener{
 			    int month = cal.get(Calendar.MONTH);
 				int day = cal.get(Calendar.DAY_OF_MONTH);
 				tv1 = (TextView)findViewById(R.id.textView1);
-			    tv1.setText(year+"îN"+(month+1)+"åé"+day+"ì˙");
+			    tv1.setText(year+"Âπ¥"+(month+1)+"Êúà"+day+"Êó•");
 			    asyncGet = new MyTask(new AsyncCallback() {
 		            public void onPreExecute() {
 		                // do something
@@ -314,7 +380,11 @@ public class ShowMainActivity extends Activity implements OnClickListener{
 		            }
 		            public void onPostExecute(ArrayList<String> result) {
 		            	// do something
-		            	tv2.setText(result.get(0));
+		            	tv2.setText("");
+		            	for(String str : result){
+		            		String crlf = System.getProperty("line.separator");
+		            		tv2.append(crlf+str);
+		            	}
 		                dialog.dismiss();
 		            }
 		            public void onCancelled() {
@@ -322,7 +392,7 @@ public class ShowMainActivity extends Activity implements OnClickListener{
 		            	dialog.dismiss();
 		            }
 		        });
-				asyncGet.execute("http://192.168.33.10:3000/formuras.json");
+				asyncGet.execute("https://kcsgogo.herokuapp.com/medicines.json");
 			    break;
 			case R.id.button2:
 				cal.add(Calendar.DAY_OF_MONTH, 1);
@@ -330,7 +400,12 @@ public class ShowMainActivity extends Activity implements OnClickListener{
 			    int month1 = cal.get(Calendar.MONTH);
 				int day1 = cal.get(Calendar.DAY_OF_MONTH);
 				tv1 = (TextView)findViewById(R.id.textView1);
-			    tv1.setText(year1+"îN"+(month1+1)+"åé"+day1+"ì˙");
+			    tv1.setText(year1+"Âπ¥"+(month1+1)+"Êúà"+day1+"Êó•");
+			    /*
+			    Log.d("„ÇÇ„Å£„Åì„Åó„Ç≥„Ç∑KOSI‰∏≠Âúí", String.valueOf(cal.get(Calendar.YEAR)));
+				Log.d("„ÇÇ„Å£„Åì„Åó„Ç≥„Ç∑KOSI‰∏≠Âúí Part2", String.valueOf(cal.get(Calendar.MONTH)+1));
+				Log.d("„ÇÇ„Å£„Åì„Åó„Ç≥„Ç∑KOSI‰∏≠Âúí Part3‚òÜ", String.valueOf(cal.get(Calendar.DAY_OF_MONTH)));
+				*/
 			    asyncGet = new MyTask(new AsyncCallback() {
 		            public void onPreExecute() {
 		                // do something
@@ -349,7 +424,11 @@ public class ShowMainActivity extends Activity implements OnClickListener{
 		            }
 		            public void onPostExecute(ArrayList<String> result) {
 		            	// do something
-		            	tv2.setText(result.get(0));
+		            	tv2.setText("");
+		            	for(String str : result){
+		            		String crlf = System.getProperty("line.separator");
+		            		tv2.append(crlf+str);
+		            	}
 		                dialog.dismiss();
 		            }
 		            public void onCancelled() {
@@ -357,10 +436,10 @@ public class ShowMainActivity extends Activity implements OnClickListener{
 		            	dialog.dismiss();
 		            }
 		        });
-				asyncGet.execute("http://192.168.33.10:3000/formuras.json");
+				asyncGet.execute("https://kcsgogo.herokuapp.com/medicines.json");
 			    break;
 			case R.id.textView1:
-				Intent intent = new Intent(ShowMainActivity.this,CalMainActivity.class);
+				Intent intent = new Intent(ShowMainActivity.this,GggggggMainActivity.class);
 				int requestCode =1001;
 				String calll = cal.get(Calendar.YEAR)+""+String.format("%02d", cal.get(Calendar.MONTH));
 				intent.putExtra("calcal", calll);
@@ -368,16 +447,5 @@ public class ShowMainActivity extends Activity implements OnClickListener{
 				break;
 			}
 		}
-	
-	/**
-     * ì˙ïtï∂éöóÒ"yyyy/MM/dd"Çjava.util.Dateå^Ç÷ïœä∑ÇµÇ‹Ç∑ÅB
-     * @param str ïœä∑ëŒè€ÇÃï∂éöóÒ
-     * @return ïœä∑å„ÇÃjava.util.DateÉIÉuÉWÉFÉNÉg
-     * @throws ParseException ì˙ïtï∂éöóÒÇ™"yyyy/MM/dd"à»äOÇÃèÍçá 
-     */
-    public static Date toDate(String str) throws ParseException {
-        Date date = DateFormat.getDateInstance().parse(str);
-        return date;
-    }
 }
 

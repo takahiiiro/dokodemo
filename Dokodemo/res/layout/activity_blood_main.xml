@@ -1,8 +1,156 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/container"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="jp.ac.kcska.dokodemo.Blood.BloodMainActivity"
-    tools:ignore="MergeRootFrame" />
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="450dp"
+            android:layout_weight="0.98" >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="0.98"
+                android:orientation="vertical" >
+
+                <ImageView
+                    android:id="@+id/imageView1"
+                    android:layout_width="300dp"
+                    android:layout_height="250dp"
+                    android:src="@drawable/blood_check" />
+
+                <ImageView
+                    android:id="@+id/imageView2"
+                    android:layout_width="match_parent"
+                    android:layout_height="239dp"
+                    android:layout_weight="0.35"
+                    android:src="@drawable/blood" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="299dp"
+                android:layout_height="match_parent"
+                android:text="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborumLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." />
+
+        </LinearLayout>
+
+        <Space
+                android:layout_width="match_parent"
+                android:layout_height="5dp" />
+        
+        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="143dp" >
+
+            <Space
+                android:layout_width="5dp"
+                android:layout_height="match_parent" />
+
+            <Button
+                android:id="@+id/morning_btn1"
+                android:layout_width="143dp"
+                android:layout_height="143dp"
+                android:background="#ff7f50"
+                android:padding="15dp"
+                android:text="朝食まえ" />
+
+            <Space
+                android:layout_width="5dp"
+                android:layout_height="match_parent" />
+
+            <Button
+                android:id="@+id/morning_btn2"
+                android:layout_width="143dp"
+                android:layout_height="143dp"
+                android:background="#ff6347"
+                android:text="朝食あと" />
+
+            <Space
+                android:layout_width="5dp"
+                android:layout_height="match_parent" />
+
+            <Button
+                android:id="@+id/lunch_btn1"
+                android:layout_width="143dp"
+                android:layout_height="143dp"
+                android:background="#00fa9a"
+                android:text="昼食まえ" />
+
+            <Space
+                android:layout_width="5dp"
+                android:layout_height="match_parent" />
+
+            <Button
+                android:id="@+id/lunch_btn2"
+                android:layout_width="143dp"
+                android:layout_height="143dp"
+                android:background="#00ff7f"
+                android:text="昼食あと" />
+        </LinearLayout>
+        
+        <Space
+                android:layout_width="match_parent"
+                android:layout_height="5dp" />
+        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="143dp" >
+
+            <Space
+                android:layout_width="5dp"
+                android:layout_height="match_parent" />
+
+            <Button
+                android:id="@+id/dinner_btn1"
+                android:layout_width="143dp"
+                android:layout_height="143dp"
+                android:background="#87cefa"
+                android:text="夕食まえ" />
+
+            <Space
+                android:layout_width="5dp"
+                android:layout_height="match_parent" />
+
+           <Button
+                android:id="@+id/dinner_btn2"
+                android:layout_width="143dp"
+                android:layout_height="143dp"
+                android:background="#00bfff"
+                android:text="夕食あと" />
+
+            <Space
+                android:layout_width="5dp"
+                android:layout_height="match_parent" />
+
+             <Button
+                android:id="@+id/night_btn1"
+                android:layout_width="143dp"
+                android:layout_height="143dp"
+                android:background="#ee82ee"
+                android:text="睡眠まえ" />
+
+            <Space
+                android:layout_width="5dp"
+                android:layout_height="match_parent" />
+
+            <Button
+                android:id="@+id/lunch_btn2"
+                android:layout_width="143dp"
+                android:layout_height="143dp"
+                android:background="#98FB98"
+                android:text="昼食あと" />
+        </LinearLayout>
+        <Space
+                android:layout_width="match_parent"
+                android:layout_height="5dp" />
+        
+    </LinearLayout>
+
+</FrameLayout>
