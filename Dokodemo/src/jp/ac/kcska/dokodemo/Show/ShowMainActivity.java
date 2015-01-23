@@ -9,7 +9,10 @@ import java.util.Date;
 
 
 
+
+
 import jp.ac.kcska.dokodemo.R;
+import jp.ac.kcska.dokodemo.Vial.AsyncCallback;
 import android.os.Bundle;
 import android.app.Activity;
 import android.app.ProgressDialog;
@@ -17,6 +20,7 @@ import android.content.Intent;
 import android.content.res.Resources;
 import android.webkit.WebView;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TabHost;
 import android.widget.TabHost.OnTabChangeListener;
 import android.widget.TabHost.TabSpec;
@@ -28,9 +32,9 @@ import android.view.View.OnClickListener;
 public class ShowMainActivity extends Activity implements OnClickListener{
 	
 	private final String TAG = "中園";
-	private MyTask task;
 	private ProgressDialog dialog;
 	private MyTask asyncGet;
+	
 	TabHost tabhost;
 	TextView tv1,tv2,tv3,tv4,tv5,tv6;
 	Button btn1,btn2;
@@ -59,6 +63,8 @@ public class ShowMainActivity extends Activity implements OnClickListener{
 	    btn2 = (Button)findViewById(R.id.button2);
 	    tv1.setText(year+"年"+(month+1)+"月"+day+"日");
 	    
+	  
+	    
 	    if(data!=null){
 	    	tv1.setText(data);
 	    }
@@ -68,6 +74,8 @@ public class ShowMainActivity extends Activity implements OnClickListener{
 	    tv1.setOnClickListener(this);
 	    btn1.setOnClickListener(this);
 	    btn2.setOnClickListener(this);
+	    
+	    
 	    //TabHost�I�u�W�F�N�g�擾      
 	    tabhost = (TabHost)findViewById(android.R.id.tabhost);   
 	    tabhost.setup();
@@ -75,26 +83,31 @@ public class ShowMainActivity extends Activity implements OnClickListener{
 	    TabSpec tab1 = tabhost.newTabSpec("tab1"); 
 	    tab1.setIndicator("食事");               
 	    tab1.setContent(R.id.tab1);
+	   
 	    tabhost.addTab(tab1);                   
 	 
 	    TabSpec tab2 = tabhost.newTabSpec("tab2"); 
 	    tab2.setIndicator("薬剤");               
 	    tab2.setContent(R.id.tab2);
+	    
 	    tabhost.addTab(tab2);
 	     
 	    TabSpec tab3 = tabhost.newTabSpec("tab3"); 
 	    tab3.setIndicator("処方"); 
 	    tab3.setContent(R.id.tab3);
+	   
 	    tabhost.addTab(tab3);
 	    
 	    TabSpec tab4 = tabhost.newTabSpec("tab4"); 
 	    tab4.setIndicator("バイタル");   
 	    tab4.setContent(R.id.tab4);
+	    
 	    tabhost.addTab(tab4);
 	    
 	    TabSpec tab5 = tabhost.newTabSpec("tab5"); 
 	    tab5.setIndicator("血糖値");  
 	    tab5.setContent(R.id.tab5);
+	    
 	    tabhost.addTab(tab5);
 	 
 	    //tabhost.setCurrentTab(0);
@@ -130,7 +143,7 @@ public class ShowMainActivity extends Activity implements OnClickListener{
             	dialog.dismiss();
             }
         });
-		asyncGet.execute("https://kcsgogo.herokuapp.com/medicines.json");
+		asyncGet.execute("https://kcsgogo.herokuapp.com/foods.json");
 		
 	    
 	    tabhost.setOnTabChangedListener(new OnTabChangeListener() {
@@ -169,7 +182,7 @@ public class ShowMainActivity extends Activity implements OnClickListener{
 			            	dialog.dismiss();
 			            }
 			        });
-					asyncGet.execute("https://kcsgogo.herokuapp.com/medicines.json");
+					asyncGet.execute("https://kcsgogo.herokuapp.com/foods.json");
 	                break;
 	            case 1:
 	                //do what you want when tab 1 is selected
@@ -240,7 +253,7 @@ public class ShowMainActivity extends Activity implements OnClickListener{
 			            	dialog.dismiss();
 			            }
 			        });
-					asyncGet.execute("https://kcsgogo.herokuapp.com/medicines.json");
+					asyncGet.execute("https://kcsgogo.herokuapp.com/prescriptions.json");
 	                break;
 	            case 3:
 	            	// �^�X�N�̐���
@@ -274,7 +287,7 @@ public class ShowMainActivity extends Activity implements OnClickListener{
 			            	dialog.dismiss();
 			            }
 			        });
-					asyncGet.execute("https://kcsgogo.herokuapp.com/medicines.json");
+					asyncGet.execute("https://kcsgogo.herokuapp.com/vitals.json");
 	            	break;
 	            case 4:
 	            	// �^�X�N�̐���
@@ -308,7 +321,7 @@ public class ShowMainActivity extends Activity implements OnClickListener{
 			            	dialog.dismiss();
 			            }
 			        });
-					asyncGet.execute("https://kcsgogo.herokuapp.com/medicines.json");
+					asyncGet.execute("https://kcsgogo.herokuapp.com/glucoses.json");
 					break;
 	            default:
 	                break;

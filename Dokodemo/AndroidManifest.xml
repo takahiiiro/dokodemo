@@ -44,7 +44,7 @@
             android:label="@string/title_activity_login_main" >
         </activity>
         <activity
-            android:name="jp.ac.kcska.dokodemo.Medicine.MedicineMainActivity"
+            android:name="jp.ac.kcska.dokodemo.Medicine.CustomListActivity"
             android:label="@string/title_activity_medicine_main" >
         </activity>
         <activity

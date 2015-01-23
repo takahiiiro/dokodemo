@@ -6,6 +6,8 @@ import java.text.ParseException;
 import java.util.ArrayList;
 import java.util.Date;
 
+import jp.ac.kcska.dokodemo.Vial.AsyncCallback;
+
 import org.apache.http.HttpResponse;
 import org.apache.http.HttpStatus;
 import org.apache.http.client.HttpClient;
@@ -29,9 +31,7 @@ public class MyTask extends AsyncTask<String, Integer, ArrayList<String>>{
     private ArrayList<String> list;
     private AsyncCallback _asyncCallback = null;
  
-    /*
-     * �R���X�g���N�^
-     */
+  
     public MyTask(AsyncCallback asyncCallback) {
         this._asyncCallback = asyncCallback;
     }
@@ -76,12 +76,66 @@ public class MyTask extends AsyncTask<String, Integer, ArrayList<String>>{
                 }
                 
                 list=new ArrayList<String>();
-            	JSONArray rootArray = new JSONArray(data);
-            	for(int i = 0; i < rootArray.length();i++){
-            		JSONObject jsonObject = rootArray.getJSONObject(i);
-            		list.add(jsonObject.getString("medicine_name"));
-            	}
-				
+                
+                if(value[0].equals("https://kcsgogo.herokuapp.com/foods.json")){
+                	JSONArray rootArray = new JSONArray(data);
+                	for(int i = 0; i < rootArray.length();i++){
+                		JSONObject jsonObject = rootArray.getJSONObject(i);
+                		list.add(""+jsonObject.getString("id"));
+                		list.add(""+jsonObject.getString("meal_id")+"");
+                		list.add(""+jsonObject.getString("foods_id")+"");
+                		list.add(""+jsonObject.getString("url")+"");
+                		list.add("\n");
+                	}
+                }else if(value[0].equalsIgnoreCase("https://kcsgogo.herokuapp.com/medicines.json")){
+                	JSONArray rootArray = new JSONArray(data);
+                	for(int i = 0; i < rootArray.length();i++){
+                		JSONObject jsonObject = rootArray.getJSONObject(i);
+                		list.add(""+jsonObject.getString("medicine_name"));
+                		list.add("1日"+jsonObject.getString("take_medicine_count")+"回");
+                		list.add(""+jsonObject.getString("take_time")+"");
+                		list.add(""+jsonObject.getString("take_number_of_days")+"日分");
+                		list.add(""+jsonObject.getString("url")+"");
+                		list.add("\n");
+                	}
+                }else if(value[0].equalsIgnoreCase("https://kcsgogo.herokuapp.com/prescriptions.json")){
+                	JSONArray rootArray = new JSONArray(data);
+                	for(int i = 0; i < rootArray.length();i++){
+                		JSONObject jsonObject = rootArray.getJSONObject(i);
+                		list.add("患者ID"+jsonObject.getString("patient_id"));
+                		list.add("処方日"+jsonObject.getString("day_of_delivery"));
+                		list.add("～"+jsonObject.getString("period")+"");
+                		list.add("病院id"+jsonObject.getString("hospital_id")+"");
+                		list.add(""+jsonObject.getString("url")+"");
+                		list.add("\n");
+                	}
+                }else if(value[0].equalsIgnoreCase("https://kcsgogo.herokuapp.com/vitals.json")){
+                	JSONArray rootArray = new JSONArray(data);
+                	for(int i = 0; i < rootArray.length();i++){
+                		JSONObject jsonObject = rootArray.getJSONObject(i);
+                		list.add("患者ID"+jsonObject.getString("patient_id"));
+                		list.add("日付"+jsonObject.getString("vital_date")+"");
+                		list.add("体温"+jsonObject.getString("temperature")+"℃");
+                		list.add("体重"+jsonObject.getString("weight")+"kg");
+                		list.add(""+jsonObject.getString("url")+"");
+                		list.add("\n");
+                	}
+                }else if(value[0].equalsIgnoreCase("https://kcsgogo.herokuapp.com/glucoses.json")){
+                	JSONArray rootArray = new JSONArray(data);
+                	for(int i = 0; i < rootArray.length();i++){
+                		JSONObject jsonObject = rootArray.getJSONObject(i);
+                		list.add("患者ID"+jsonObject.getString("patient_id"));
+                		list.add("タイムゾーン"+jsonObject.getString("glucose_timezone")+"");
+                		list.add("時間"+jsonObject.getString("time")+"");
+                		list.add("血糖値"+jsonObject.getString("glucose_value")+"");
+                		list.add("インスリン投与量"+jsonObject.getString("insulin_dose")+"ｇ");
+                		list.add("インスリンタイプ"+jsonObject.getString("insulin_type_id")+"");
+                		list.add(""+jsonObject.getString("url")+"");
+                		list.add("\n");
+                	}
+                }
+            	
+            	
               } catch (InterruptedException e) {
             	  	e.printStackTrace();
               } catch (JSONException e) {
@@ -90,6 +144,8 @@ public class MyTask extends AsyncTask<String, Integer, ArrayList<String>>{
                 Log.d("JSONSampleActivity", "Error Execute");
                 return list;
               }
+            
+            
 				/*
 				for (int i = 0; i < eventArray.length(); i++) {
 				    JSONObject jsonObject = eventArray.getJSONObject(i);
@@ -100,6 +156,8 @@ public class MyTask extends AsyncTask<String, Integer, ArrayList<String>>{
         return list;
     }
  
+   
+    
     protected void onProgressUpdate(Integer... values) {
         super.onProgressUpdate(values);
         this._asyncCallback.onProgressUpdate(values[0]);

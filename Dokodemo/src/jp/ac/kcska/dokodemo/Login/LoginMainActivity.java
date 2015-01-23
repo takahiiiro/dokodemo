@@ -19,8 +19,8 @@ import android.widget.Toast;
 
 public class LoginMainActivity extends Activity {
 	
-	String id = "Nakazono";
-	String pass = "pass";
+	String id = "a";
+	String pass = "";
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -90,7 +90,7 @@ public class LoginMainActivity extends Activity {
 			return rootView;
 		}
 	}
-	
+	/*
 	public void dialog_pass_change() {
 		// TODO 自動生成されたメソッド・スタブ
 		LayoutInflater factory = LayoutInflater.from(LoginMainActivity.this);
@@ -131,7 +131,7 @@ public class LoginMainActivity extends Activity {
 			}
 		})
 		.show();	
-	}
+	}*/
 	
 	public void info_change(){
 		LayoutInflater factory = LayoutInflater.from(LoginMainActivity.this);

@@ -1,8 +1,10 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/container"
+    android:id="@+id/RelativeLayout1"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:gravity="right"
+    android:background="#FFFF00"
     tools:context="jp.ac.kcska.dokodemo.Vial.VitalMainActivity"
     tools:ignore="MergeRootFrame" >
 
@@ -12,148 +14,142 @@
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="22dp"
-        android:text="Time" />
-
-    <TextView
-        android:id="@+id/textView8"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:text="血圧測定" />
-
-    <Button
-        android:id="@+id/button1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="20dp"
-        android:text="登録" />
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/textView1"
-        android:layout_below="@+id/textView1"
-        android:layout_marginTop="42dp"
-        android:text="基礎体温" />
-
-    <TextView
-        android:id="@+id/textView11"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/textView12"
-        android:layout_alignBottom="@+id/textView12"
-        android:layout_alignLeft="@+id/textView2"
-        android:text="最低血圧" />
-
-    <TextView
-        android:id="@+id/textView6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignRight="@+id/textView1"
-        android:layout_below="@+id/textView4"
-        android:layout_marginTop="17dp"
-        android:text="体重" />
+        android:text="Time"
+        android:textSize="50dp" />
 
     <TextView
         android:id="@+id/textView7"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/textView6"
         android:layout_alignBottom="@+id/textView6"
-        android:layout_alignRight="@+id/textView5"
-        android:hint="ーーーKg" />
-
-    <TextView
-        android:id="@+id/textView5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignRight="@+id/textView3"
-        android:layout_below="@+id/textView3"
-        android:layout_marginTop="26dp"
-        android:hint="ーーー℃" />
-
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/textView5"
-        android:layout_alignBottom="@+id/textView5"
-        android:layout_alignLeft="@+id/textView6"
-        android:text="体温" />
-
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/textView2"
-        android:layout_alignBottom="@+id/textView2"
-        android:layout_alignParentRight="true"
-        android:layout_marginRight="26dp"
-        android:hint="基礎℃" />
+        android:layout_alignLeft="@+id/textView5"
+        android:layout_alignTop="@+id/textView6"
+        android:hint="ーーーKg"
+        android:textSize="30dp" />
 
     <TextView
         android:id="@+id/textView12"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/button1"
+        android:layout_alignBaseline="@+id/textView11"
+        android:layout_alignBottom="@+id/textView11"
         android:layout_alignLeft="@+id/textView10"
-        android:hint="ーーーmmHg" />
-
-    <TextView
-        android:id="@+id/textView10"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/textView9"
-        android:layout_alignBottom="@+id/textView9"
-        android:layout_alignRight="@+id/textView7"
-        android:hint="ーーーmmHg" />
-
-    <Switch
-        android:id="@+id/switch1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/textView8"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
-        android:textOff="朝"
-        android:textOn="夜"
-        android:thumb="@drawable/test_selector_switch_thumb"
-        android:track="@drawable/test_selector_switch_background"
-        android:background="#e6e6e6" />
-
-    <TextView
-        android:id="@+id/textView9"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/textView11"
-        android:layout_alignLeft="@+id/textView11"
-        android:layout_marginBottom="22dp"
-        android:text="最高血圧" />
+        android:hint="ーーーmmHg"
+        android:textSize="30dp" />
 
    
-    <TextView
-        android:id="@+id/textView14"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/textView3"
-        android:layout_centerHorizontal="true"
-        android:text="毎朝1回測ってね！！"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:textColor="#ff0000" />
 
-    <TextView
-        android:id="@+id/textView13"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/textView1"
-        android:layout_alignBottom="@+id/textView1"
-        android:layout_alignLeft="@+id/textView10"
-        android:text="TextView" />
-    
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:layout_alignLeft="@+id/switch1"
+        android:layout_alignRight="@+id/switch1"
+        android:layout_below="@+id/textView12"
+        android:layout_marginTop="22dp"
+        android:background="@drawable/button_corners"
+        android:text="登録"
+        android:textSize="30dp" />
+
+     <TextView
+         android:id="@+id/textView6"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_below="@+id/textView4"
+         android:layout_marginTop="39dp"
+         android:layout_toLeftOf="@+id/textView2"
+         android:text="体　　重"
+         android:textSize="30dp" />
+
+     <Switch
+         android:id="@+id/switch1"
+         android:layout_width="180dp"
+         android:layout_height="60dp"
+         android:layout_below="@+id/textView7"
+         android:layout_centerHorizontal="true"
+         android:layout_marginTop="37dp"
+         android:background="@drawable/button_corners"
+         android:textOff="朝"
+         android:textOn="夜"
+         android:textSize="90dp"
+         android:thumb="@drawable/test_selector_switch_thumb"
+         android:track="@drawable/test_selector_switch_background" />
+
+     <TextView
+         android:id="@+id/textView10"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_alignLeft="@+id/textView7"
+         android:layout_below="@+id/switch1"
+         android:layout_marginTop="41dp"
+         android:hint="ーーーmmHg"
+         android:textSize="30dp" />
+
+     <TextView
+         android:id="@+id/textView11"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_below="@+id/textView9"
+         android:layout_marginTop="37dp"
+         android:layout_toLeftOf="@+id/textView2"
+         android:text="最低血圧"
+         android:textSize="30dp" />
+
+     <TextView
+         android:id="@+id/textView9"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_alignBaseline="@+id/textView10"
+         android:layout_alignBottom="@+id/textView10"
+         android:layout_toLeftOf="@+id/textView2"
+         android:text="最高血圧"
+         android:textSize="30dp" />
+
+     <TextView
+         android:id="@+id/textView4"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_below="@+id/imageView1"
+         android:layout_marginTop="10dp"
+         android:layout_toLeftOf="@+id/textView2"
+         android:text="体　　温"
+         android:textSize="30dp" />
+
+     <TextView
+         android:id="@+id/textView5"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_alignBaseline="@+id/textView4"
+         android:layout_alignBottom="@+id/textView4"
+         android:layout_toRightOf="@+id/imageView1"
+         android:hint="ーーー℃"
+         android:textSize="30dp" />
+
+     <ImageView
+         android:id="@+id/imageView1"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_below="@+id/textView1"
+         android:layout_centerHorizontal="true"
+         android:layout_marginTop="15dp"
+         android:src="@drawable/ic_image_wb_sunny" />
+
+     <TextView
+         android:id="@+id/textView2"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_alignBottom="@+id/textView1"
+         android:layout_alignLeft="@+id/imageView1"
+         android:text="基礎体温"
+         android:textSize="30dp" />
+
+     <TextView
+         android:id="@+id/textView3"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_alignParentTop="true"
+         android:layout_alignRight="@+id/textView5"
+         android:hint="基礎℃"
+         android:textSize="25dp" />
+
 </RelativeLayout>
