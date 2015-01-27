@@ -1,6 +1,9 @@
 package jp.ac.kcska.dokodemo.Home;
 
+import java.util.ArrayList;
+
 import jp.ac.kcska.dokodemo.R;
+import jp.ac.kcska.dokodemo.Avatar.AvatarMainActivity;
 import jp.ac.kcska.dokodemo.Blood.BloodMainActivity;
 import jp.ac.kcska.dokodemo.Show.ShowMainActivity;
 import android.app.Activity;
@@ -19,45 +22,20 @@ import org.achartengine.renderer.XYMultipleSeriesRenderer;
 import org.achartengine.renderer.XYSeriesRenderer;
  
 
-
-
-import android.app.Activity;
 import android.content.Context;
-import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.graphics.Color;
-import android.os.Bundle;
-import android.view.Window;
 import android.widget.LinearLayout;
 
-import org.apache.http.HttpResponse;
-import org.apache.http.HttpStatus;
-import org.apache.http.client.HttpClient;
-import org.apache.http.client.methods.HttpGet;
-import org.apache.http.impl.client.DefaultHttpClient;
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-
 import android.app.ProgressDialog;
-import android.content.Context;
-import android.content.DialogInterface;
-import android.os.AsyncTask;
-import android.util.Log;
-import android.widget.Button;
-import android.widget.TextView;
-import android.content.DialogInterface.OnCancelListener;
 
 
 public class HomeMainActivity extends Activity {
     /** Called when the activity is first created. */
-	private ExampleOpenHelper mExampleOpenHelper;
-	private TextView textView;
-    private ProgressDialog dialog;
-    private Context context;
-    
-    
+	static ArrayList<String> list;
+	private ProgressDialog dialog;
+	private MyTask asyncGet;
 	 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -71,21 +49,46 @@ public class HomeMainActivity extends Activity {
         ImageButton imageButton3 = (ImageButton)findViewById(R.id.imageButton3);
         ImageButton imageButton4 = (ImageButton)findViewById(R.id.imageButton4);
         
-        mExampleOpenHelper = new ExampleOpenHelper(HomeMainActivity.this);
-		SQLiteDatabase db = mExampleOpenHelper.getReadableDatabase(); //データベース取得
-		Cursor cursor = db.rawQuery("SELECT * from example", new String[] {});
+        list = new ArrayList<String>();
 		
-		GraphicalView lineChartGraph = LineChart.execute(this,cursor);
-		mainFrame.addView(lineChartGraph);
-		
-		cursor.close();
-		db.close();
-		mExampleOpenHelper.close();
+		//Task
+		asyncGet = new MyTask(new AsyncCallback() {
+            public void onPreExecute() {
+                // do something
+            	dialog = new ProgressDialog(HomeMainActivity.this);
+                dialog.setTitle("Please wait");
+                dialog.setMessage("Loading data...");
+                dialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
+                dialog.setCancelable(true);
+                dialog.setMax(100);
+                dialog.setProgress(0);
+                dialog.show();
+            }
+            public void onProgressUpdate(int progress) {
+            	// do something
+            	dialog.setProgress(progress);
+            }
+            public void onPostExecute(ArrayList<String> result) {
+            	list = result;
+                dialog.dismiss();
+                
+              //レイアウトに表示
+        		LinearLayout mainFrame = (LinearLayout)findViewById(R.id.layout1);	
+        		GraphicalView lineChartGraph = LineChart.execute(HomeMainActivity.this);
+        		mainFrame.addView(lineChartGraph);
+        			
+            }
+            public void onCancelled() {
+            	// do something
+            	dialog.dismiss();
+            }
+        });
+		asyncGet.execute("https://kcsgogo.herokuapp.com/glucoses.json");
 		  
         imageButton1.setOnClickListener(new OnClickListener(){
             public void onClick(View v) {
                 //アバター管理画面を起動
-                Intent intent = new Intent();
+                Intent intent = new Intent(HomeMainActivity.this,AvatarMainActivity.class);
                 startActivity(intent);
             }
         });
@@ -144,29 +147,37 @@ public class HomeMainActivity extends Activity {
      
     	public static class LineChart{
     		static XYSeries series,series2,series3;
-    		public static GraphicalView execute(Context context,Cursor cursor) {
+    		public static GraphicalView execute(Context context) {
     			
+    			//血糖値のグラフ
     			series = new XYSeries("血糖値");
-    			//標準としきい値		 
-    			int number = 0;
     			double x,y;
-    			boolean next = cursor.moveToFirst();
-    			while (next) {
-    				x = number;
-    				y = cursor.getDouble(1);
+    			
+    			for(int i=0;i<21;i++){
+    				Double value = Double.parseDouble(list.get(i));
+    				x = i;
+    				y = value;
     				series.add(x, y);
-    				number++;
-    				next = cursor.moveToNext();
     			}
     			
-                series2 = new XYSeries("基準値");
-    			//標準としきい値2		 
+    			//食後の基準値グラフ
+                series2 = new XYSeries("食後の基準値");		 
     			double a,b;
     	 
-    	        for (int i = 0; i < 13; i++) {
+    	        for (int i = 0; i < 21; i++) {
     	            a = i;
-    	            b = 150;
+    	            b = 140;
     	            series2.add(a, b);
+    	        }
+    	        
+    	      //空腹時の基準値グラフ
+                series3 = new XYSeries("空腹時の基準値");		 
+    			double c,d;
+    	 
+    	        for (int i = 0; i < 21; i++) {
+    	            c = i;
+    	            d = 100;
+    	            series3.add(c, d);
     	        }
     	        
     			//インテントではなくGraphicalViewを戻り値に
@@ -177,6 +188,7 @@ public class HomeMainActivity extends Activity {
     			XYMultipleSeriesDataset dataSet = new XYMultipleSeriesDataset();
     			dataSet.addSeries(series);
     			dataSet.addSeries(series2);
+    			dataSet.addSeries(series3);
     			return dataSet;
     		}
     		public static XYMultipleSeriesRenderer getRenderer(){ //個別のグラフ
@@ -193,6 +205,13 @@ public class HomeMainActivity extends Activity {
     			renderer2.setPointStyle(PointStyle.SQUARE);	//ポイント設定
     			renderer2.setPointStrokeWidth(8);
     			renderer2.setFillPoints(true);
+    			
+    			XYSeriesRenderer renderer3 = new XYSeriesRenderer();
+    			renderer3.setColor(Color.BLUE); //グラフの色
+    			renderer3.setLineWidth(2); //グラフの幅
+    			renderer3.setPointStyle(PointStyle.SQUARE);	//ポイント設定
+    			renderer3.setPointStrokeWidth(8);
+    			renderer3.setFillPoints(true);
     			
     			XYMultipleSeriesRenderer mRenderer = new XYMultipleSeriesRenderer(); //グラフ全体
     			mRenderer.setXLabels(6);
@@ -223,6 +242,7 @@ public class HomeMainActivity extends Activity {
     			mRenderer.setYLabelsVerticalPadding(-8);
     			mRenderer.addSeriesRenderer(renderer1);
     			mRenderer.addSeriesRenderer(renderer2);
+    			mRenderer.addSeriesRenderer(renderer3);
     			
     			return mRenderer;		
     		}

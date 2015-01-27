@@ -8,7 +8,7 @@
     <string name="title_activity_food_main">FoodMainActivity</string>
     <string name="title_activity_graph_main">GraphMainActivity</string>
     <string name="title_activity_home_main">HomeMainActivity</string>
-    <string name="title_activity_login_main">LoginMainActivity</string>
+    <string name="title_activity_login_main">ワンタイムログイン</string>
     <string name="title_activity_medicine_main">MedicineMainActivity</string>
     <string name="title_activity_show_main">ShowMainActivity</string>
     <string name="title_activity_cal_main">CalMainActivity</string>
@@ -16,7 +16,6 @@
     <string name="title_activity_food_mane">食事管理</string>
     <string name="title_activity_food_change_select">食事変更選択画面</string>
     <string name="title_activity_food_sign_up">食事登録画面</string>
-    
     <string name="btn_month_next">次へ</string>
     <string name="btn_month_prev">前へ</string>
 
@@ -29,5 +28,7 @@
         <item>金</item>
         <item>土</item>
     </string-array>
+
+    <string name="title_activity_avatar_main">AvatarMainActivity</string>
 
 </resources>

@@ -1,13 +1,8 @@
 package jp.ac.kcska.dokodemo.Show;
 
 import java.io.ByteArrayOutputStream;
-import java.text.DateFormat;
-import java.text.ParseException;
 import java.util.ArrayList;
-import java.util.Date;
-
 import jp.ac.kcska.dokodemo.Vial.AsyncCallback;
-
 import org.apache.http.HttpResponse;
 import org.apache.http.HttpStatus;
 import org.apache.http.client.HttpClient;
@@ -16,14 +11,8 @@ import org.apache.http.impl.client.DefaultHttpClient;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-
-import android.app.ProgressDialog;
-import android.content.Context;
-import android.content.DialogInterface;
 import android.os.AsyncTask;
 import android.util.Log;
-import android.widget.TextView;
-import android.content.DialogInterface.OnCancelListener;
 
 public class MyTask extends AsyncTask<String, Integer, ArrayList<String>>{
  

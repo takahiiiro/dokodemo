@@ -144,8 +144,8 @@
                 android:id="@+id/lunch_btn2"
                 android:layout_width="143dp"
                 android:layout_height="143dp"
-                android:background="#98FB98"
-                android:text="昼食あと" />
+                android:background="#98FB98" />
+
         </LinearLayout>
         <Space
                 android:layout_width="match_parent"

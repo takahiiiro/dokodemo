@@ -1,65 +1,108 @@
 package jp.ac.kcska.dokodemo.Login;
 
+import java.util.ArrayList;
+
 import jp.ac.kcska.dokodemo.R;
-import android.support.v4.app.Fragment;
 import android.app.Activity;
 import android.app.AlertDialog;
+import android.app.Fragment;
+import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
-import android.view.View.OnClickListener;
 import android.view.ViewGroup;
+import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
 public class LoginMainActivity extends Activity {
+	private ProgressDialog dialog;
 	
-	String id = "a";
+	Button bt;
+	EditText ed1;
+	EditText ed2;
+	
+	String id = "";
 	String pass = "";
-
+	String url = "https://kcsgogo.herokuapp.com/logins.json";
+	String count = "0";
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.fragment_login_main);
-		
-		Button bt = (Button)findViewById(R.id.button1);
-		final EditText ed1 = (EditText)findViewById(R.id.editText1);
-		final EditText ed2 = (EditText)findViewById(R.id.editText2);
+		dialog = new ProgressDialog(LoginMainActivity.this);
+        dialog.setTitle("Please wait");
+        dialog.setMessage("Loading data...");
+        dialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
+        dialog.setCancelable(true);
+        dialog.setMax(100);
+        dialog.setProgress(0);
+        
+		bt = (Button)findViewById(R.id.button1);
+		ed1 = (EditText)findViewById(R.id.editText1);
+		ed2 = (EditText)findViewById(R.id.editText2);
 		
 		bt.setOnClickListener(new OnClickListener() {
 			
 			public void onClick(View v) {
-				// TODO �����������ꂽ���\�b�h�E�X�^�u
-				String inputId = ed1.getText().toString();
-				if(inputId.equals("")){
-					Toast.makeText(LoginMainActivity.this, "ユーザIDを入力してください", Toast.LENGTH_SHORT).show();
+				id = ed1.getText().toString();
+				pass = ed2.getText().toString();
+				if(id.equals("")){
+					Toast.makeText(LoginMainActivity.this, 
+							"ユーザIDを入力してください", Toast.LENGTH_SHORT).show();
+				}else if(pass.equals("")){
+					Toast.makeText(LoginMainActivity.this, 
+							"パスワードを入力してください", Toast.LENGTH_SHORT).show();
 				}else{
-					if(id.equals(inputId)){
-						String inputPass = ed2.getText().toString();
-						if(pass.equals(inputPass)){
-							Intent intent = new Intent(LoginMainActivity.this, 
-								OneTimeActivity.class);
-							startActivity(intent);
-						}else{
-							Toast.makeText(LoginMainActivity.this, "パスワードが違います", Toast.LENGTH_SHORT).show();
-						}
-					}else{
-						Toast.makeText(LoginMainActivity.this, "ユーザＩＤが違います", Toast.LENGTH_SHORT).show();
-					}
+					MyTask asyncGet = new MyTask(new AsyncCallback() {
+			            public void onPreExecute() {dialog.show();}
+			            public void onProgressUpdate(int progress) {dialog.setProgress(progress);}
+			            public void onPostExecute(ArrayList<String> result) {
+			            	dialog.dismiss();
+			            	Log.d("結果", String.valueOf(result));
+			            	checkUser(result);
+			            	
+			            }
+			            public void onCancelled() {dialog.dismiss();}
+			        });
+					asyncGet.execute(url, id, pass, count);
 				}
-				
 			}
 		});
 	}
-
+	
+	public void checkUser(ArrayList<String> result){
+		if(result.isEmpty()){
+			Toast.makeText(LoginMainActivity.this,
+					"もう一度入力してください", Toast.LENGTH_SHORT).show();
+		}else{
+			String _id = result.get(0).toString();
+			String _pass= result.get(1).toString();
+			if(id.equals(_id) && pass.equals(_pass)){
+				Intent intent = new Intent(LoginMainActivity.this, OneTimeActivity.class);
+				intent.putExtra("patient_id", _id);
+					startActivity(intent);
+			}else if(id.equals(_id)){
+				Toast.makeText(LoginMainActivity.this,
+						"パスワードが違います", Toast.LENGTH_SHORT).show();
+			}else if(pass.equals(_pass)){
+				Toast.makeText(LoginMainActivity.this,
+						"ユーザIDが違います", Toast.LENGTH_SHORT).show();
+			}else{
+				Toast.makeText(LoginMainActivity.this,
+						"もう一度入力してください", Toast.LENGTH_SHORT).show();
+			}
+		}
+	}
+	
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
-		getMenuInflater().inflate(R.menu.login_main, menu);
+		getMenuInflater().inflate(R.menu.main, menu);
 		return true;
 	}
 /*

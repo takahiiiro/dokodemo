@@ -1,26 +1,14 @@
 package jp.ac.kcska.dokodemo.Show;
 
-import java.text.DateFormat;
-import java.text.ParseException;
 import java.util.ArrayList;
 import java.util.Calendar;
-import java.util.Date;
-
-
-
-
-
-
 import jp.ac.kcska.dokodemo.R;
 import jp.ac.kcska.dokodemo.Vial.AsyncCallback;
 import android.os.Bundle;
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Intent;
-import android.content.res.Resources;
-import android.webkit.WebView;
 import android.widget.Button;
-import android.widget.ImageView;
 import android.widget.TabHost;
 import android.widget.TabHost.OnTabChangeListener;
 import android.widget.TabHost.TabSpec;

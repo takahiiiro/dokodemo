@@ -2,12 +2,9 @@ package jp.ac.kcska.dokodemo.Vial;
 
 import android.os.Bundle;
 import android.view.View;
-
 import java.util.ArrayList;
 import java.util.Calendar;
-
 import jp.ac.kcska.dokodemo.R;
-import jp.ac.kcska.dokodemo.Blood.Blood;
 import jp.ac.kcska.dokodemo.Vial.AsyncCallback;
 import jp.ac.kcska.dokodemo.Vial.MyTask;
 import jp.ac.kcska.dokodemo.Vial.PostMyTask; 

@@ -16,5 +16,15 @@
     <style name="AppTheme" parent="AppBaseTheme">
         <!-- All customizations that are NOT specific to a particular API-level can go here. -->
     </style>
+    
+    <!-- カード の背景 -->
+  	<style name="CustomTheme.Light" parent="@android:style/Theme.Light">
+		
+    	<item name="android:panelFullBackground">@drawable/button_des</item>
+  	</style>
+  	<!-- spinnerのアイコン-->
+  	<style name="SampleIcon" parent="android:Widget.DropDownItem.Spinner">
+    	<item name="android:checkMark">@drawable/spinner_icon</item>
+  	</style>
 
 </resources>
